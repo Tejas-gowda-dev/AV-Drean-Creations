@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://avdreamcreations.com/sitemap.xml

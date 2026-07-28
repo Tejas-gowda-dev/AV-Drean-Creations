@@ -1,0 +1,6 @@
+{
+  "name": "AV Dream Creations",
+  "description": "Premium Wedding Photography & Cinematic Films in Bangalore, Karnataka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
