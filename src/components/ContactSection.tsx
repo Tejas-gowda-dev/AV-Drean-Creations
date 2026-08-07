@@ -93,26 +93,27 @@ Sent via AV Dream Creations Website`;
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Column 1: Info */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold mb-3 font-sans">
-                <Heart className="w-3.5 h-3.5 fill-gold text-gold" /> Let’s Create Magic
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient mb-3 font-sans">
+                <Heart className="w-3.5 h-3.5 fill-brand-gradient text-brand-gradient" /> Let’s Create Magic
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight mb-4 leading-tight">
+              {/* <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight mb-4 leading-tight">
                 Get Your Wedding Quote in <span className="italic text-gold">30 Minutes</span>
+              </h2> */}
+              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight mb-4 leading-tight">
+                Get Your Wedding Quote in <span className="italic text-brand-gradient">30 Minutes</span>
               </h2>
-              <p className="font-sans text-neutral-600 text-sm leading-relaxed">
-                Limited bookings for the 2026/2027 wedding season. We deliberately capture a limited number of weddings each season to guarantee uncompromised focus, premium storytelling, and same-day master deliveries.
-              </p>
+
             </div>
 
             {/* Direct Connect Info */}
             <div className="space-y-6">
               <a href="tel:+919743644065" className="flex items-start gap-4 p-4 rounded-sm bg-white border border-neutral-200 hover:border-gold/40 transition-all group">
                 <div className="bg-gold/10 text-gold p-3 rounded-sm group-hover:bg-gold group-hover:text-white transition-all">
-                   <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold font-sans">Call Our Experience Desk</h4>
@@ -123,7 +124,7 @@ Sent via AV Dream Creations Website`;
 
               <a href="mailto:avdream518@gmail.com" className="flex items-start gap-4 p-4 rounded-sm bg-white border border-neutral-200 hover:border-gold/40 transition-all group">
                 <div className="bg-gold/10 text-gold p-3 rounded-sm group-hover:bg-gold group-hover:text-white transition-all">
-                   <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold font-sans">Send Project Brief</h4>
@@ -134,7 +135,7 @@ Sent via AV Dream Creations Website`;
 
               <div className="flex items-start gap-4 p-4 rounded-sm bg-white border border-neutral-200 hover:border-gold/40 transition-all group">
                 <div className="bg-gold/10 text-gold p-3 rounded-sm group-hover:bg-gold group-hover:text-white transition-all">
-                   <MapPin className="w-5 h-5" />
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold font-sans">Studio Address</h4>
@@ -160,11 +161,11 @@ Sent via AV Dream Creations Website`;
               <h4 className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold font-sans">
                 Serving All Karnataka:
               </h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex gap-2">
                 {serviceAreas.map((area, i) => (
                   <span
                     key={i}
-                  className="text-xs bg-white border border-neutral-200 text-neutral-600 px-3 py-1.5 rounded-sm font-sans hover:border-gold/40 transition-all"
+                    className="text-xs bg-white border border-neutral-200 text-neutral-600 px-3 py-1.5 rounded-sm font-sans hover:border-gold/40 transition-all"
                   >
                     {area}
                   </span>
@@ -176,9 +177,9 @@ Sent via AV Dream Creations Website`;
 
           {/* Column 2: Form */}
           <div className="lg:col-span-7 bg-white border border-neutral-200 rounded-sm p-6 md:p-10 shadow-xl relative text-neutral-900">
-            <div className="absolute top-0 right-10 -translate-y-1/2 bg-gold/10 border border-gold/20 px-4 py-1 rounded-sm text-xs font-mono text-gold flex items-center gap-1.5 backdrop-blur-md font-bold uppercase tracking-widest">
+            {/* <div className="absolute top-0 right-10 -translate-y-1/2 bg-gold/10 border border-gold/20 px-4 py-1 rounded-sm text-xs font-mono text-gold flex items-center gap-1.5 backdrop-blur-md font-bold uppercase tracking-widest">
               <Sparkles className="w-3 h-3 text-gold" /> Hey There!
-            </div>
+            </div> */}
 
             <AnimatePresence mode="wait">
               {!submitSuccess ? (
@@ -193,7 +194,7 @@ Sent via AV Dream Creations Website`;
                         name="name"
                         id="name"
                         required
-                        placeholder="e.g., Tejas Gowda"
+                        placeholder=""
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full h-12 px-4 rounded-sm bg-white border border-neutral-200 focus:border-gold focus:ring-1 focus:ring-gold font-sans text-neutral-800 text-sm outline-none transition-all"
@@ -209,7 +210,7 @@ Sent via AV Dream Creations Website`;
                         name="phone"
                         id="phone"
                         required
-                        placeholder="e.g., +91 98765 43210"
+                        placeholder=""
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full h-12 px-4 rounded-sm bg-white border border-neutral-200 focus:border-gold focus:ring-1 focus:ring-gold font-sans text-neutral-800 text-sm outline-none transition-all"
@@ -226,7 +227,7 @@ Sent via AV Dream Creations Website`;
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="e.g., tejas@example.com"
+                        placeholder=""
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full h-12 px-4 rounded-sm bg-white border border-neutral-200 focus:border-gold focus:ring-1 focus:ring-gold font-sans text-neutral-800 text-sm outline-none transition-all"
@@ -279,7 +280,7 @@ Sent via AV Dream Creations Website`;
                         type="number"
                         name="guestCount"
                         id="guestCount"
-                        placeholder="e.g., 300 guests"
+                        placeholder=""
                         value={formData.guestCount}
                         onChange={handleChange}
                         className="w-full h-12 px-4 rounded-sm bg-white border border-neutral-200 focus:border-gold focus:ring-1 focus:ring-gold font-sans text-neutral-800 text-sm outline-none transition-all"

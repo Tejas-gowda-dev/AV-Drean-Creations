@@ -12,7 +12,7 @@ export default function MeetTheTeam() {
             The Visionaries
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
-            Meet the Team Behind <span className="italic text-gold">AV Dream Creations</span>
+            Meet the Team Behind <span className="italic text-brand-gradient">AV Dream Creations</span>
           </h2>
           <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed">
             Our talented guild of master candid photographers, cinematic directors, and editors combine experience and technology to tell your emotional narrative.
@@ -68,8 +68,8 @@ export default function MeetTheTeam() {
 
               {/* Skill markers */}
               <div className="mt-6 pt-4 border-t border-neutral-200/60 flex items-center gap-3 text-[10px] font-mono text-neutral-400">
-                <span className="flex items-center gap-1"><Camera className="w-3.5 h-3.5 text-gold" /> Professional Grade</span>
-                <span className="flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-gold" /> Storyteller</span>
+                <span className="flex items-center gap-1"><Camera className="w-3.5 h-3.5 text-brand-gradient" /> Professional Grade</span>
+                <span className="flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-brand-gradient" /> Storyteller</span>
               </div>
             </div>
           ))}

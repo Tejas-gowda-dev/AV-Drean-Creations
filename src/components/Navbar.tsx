@@ -50,8 +50,8 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
   id="main-navigation"
   className="fixed top-0 left-0 right-0 z-40 bg-transparent text-white py-6 transition-none"
 >
-      {/* <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between"> */}
-      <div className="max-w-[1500px] mx-auto px-8 lg:px-12 h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
+      {/* <div className="max-w-[1500px] mx-auto px-8 lg:px-12 h-24 flex items-center justify-between"> */}
         
         {/* Brand Logo */}
         <button
@@ -67,8 +67,8 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
         </button>
 
         {/* Desktop Menu */}
-        {/* <div className="hidden lg:flex items-center gap-1 ml-auto mr-8"> */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-6 ml-auto mr-8">
+        {/* <div className="hidden lg:flex items-center gap-10"> */}
           {navItems.map((item) => {
             const isActive = currentRoute === item.route;
             return (
@@ -101,8 +101,8 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
           <button
             id="nav-cta-btn"
             onClick={() => handleNavClick('contact')}
-            // className="hidden sm:flex items-center gap-2 h-11 px-5 text-[11px] font-mono uppercase tracking-widest transition-all cursor-pointer font-semibold bg-brand-gradient hover:bg-brand-gradient-hover text-white rounded-sm"
-            className="hidden lg:flex items-center justify-center h-12 px-8 rounded-full border border-white/30 backdrop-blur-sm text-white uppercase tracking-[3px] text-[11px] hover:bg-white hover:text-black transition-all duration-500"
+            className="hidden sm:flex items-center gap-2 h-11 px-5 text-[11px] font-mono uppercase tracking-widest transition-all cursor-pointer font-semibold bg-brand-gradient hover:bg-brand-gradient-hover text-white rounded-sm"
+            // className="hidden lg:flex items-center justify-center h-12 px-8 rounded-full border border-white/30 backdrop-blur-sm text-white uppercase tracking-[3px] text-[11px] hover:bg-white hover:text-black transition-all duration-500". contect button
           >
             Contact <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -123,8 +123,8 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-dropdown"
-          // className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl py-6 px-4 space-y-2 flex flex-col z-50 text-neutral-950 animate-fadeIn"
-          className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl py-8 px-6 flex flex-col gap-5 text-white"
+          className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl py-6 px-4 space-y-2 flex flex-col z-50 text-neutral-950 animate-fadeIn"
+          // className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl py-8 px-6 flex flex-col gap-5 text-white"
         >
           {navItems.map((item) => {
             const isActive = currentRoute === item.route;
@@ -133,8 +133,8 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
                 key={item.route}
                 id={`mobile-nav-item-${item.route}`}
                 onClick={() => handleNavClick(item.route)}
-                // className={`w-full text-left py-3 px-4 rounded-xl text-xs uppercase tracking-widest font-mono font-medium transition-colors cursor-pointer ${
-                className={`w-full text-left uppercase tracking-[3px] text-sm py-2 transition-all ${
+                className={`w-full text-left py-3 px-4 rounded-xl text-xs uppercase tracking-widest font-mono font-medium transition-colors cursor-pointer ${
+                // className={`w-full text-left uppercase tracking-[3px] text-sm py-2 transition-all ${
                   isActive
                     ? 'bg-gold/10 text-gold font-semibold'
                     : 'hover:bg-neutral-50 text-neutral-700'
@@ -153,7 +153,7 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
             </button>
             <a
               href="tel:+919743644065"
-              className="w-full border border-neutral-200 text-neutral-800 text-xs font-mono uppercase tracking-widest font-semibold py-4 rounded-xl flex items-center justify-center gap-2 h-12"
+              className="w-full border border-neutral-200 text-neutral-800 text-xs text-white font-mono uppercase tracking-widest font-semibold py-4 rounded-xl flex items-center justify-center gap-2 h-12"
             >
               <Phone className="w-4 h-4" /> Call Studio
             </a>

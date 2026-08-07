@@ -26,73 +26,17 @@ export default function About() {
   ];
 
   return (
-    <section id="about-section" style={{ backgroundColor: 'rgba(251, 246, 239, 1)' }} className="relative overflow-hidden py-24 text-neutral-900 border-b border-neutral-100">
-      {/* Subtle brand logo watermark background */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-[350px] h-[350px] md:w-[600px] md:h-[600px] pointer-events-none opacity-[0.03] md:opacity-[0.05] select-none z-0">
-        <svg viewBox="0 0 100 85" className="w-full h-full">
-          <defs>
-            <linearGradient id="about-logo-camera-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#8265AF" />
-              <stop offset="100%" stopColor="#D17B92" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M 22 25
-               C 22 22, 24 20, 27 20
-               L 35 20
-               C 37 15, 40 13, 44 13
-               L 56 13
-               C 60 13, 63 15, 65 20
-               L 73 20
-               C 76 20, 78 22, 78 25
-               L 78 68
-               C 78 72, 76 74, 73 74
-               L 27 74
-               C 24 74, 22 72, 22 68
-               Z"
-            fill="none"
-            stroke="url(#about-logo-camera-gradient)"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle
-            cx="50"
-            cy="47"
-            r="17"
-            fill="none"
-            stroke="url(#about-logo-camera-gradient)"
-            strokeWidth="3.5"
-          />
-          <circle
-            cx="50"
-            cy="47"
-            r="11"
-            fill="url(#about-logo-camera-gradient)"
-          />
-          <text
-            x="50"
-            y="51.5"
-            textAnchor="middle"
-            fill="white"
-            fontSize="14"
-            fontFamily='"Alex Brush", "Great Vibes", cursive'
-          >
-            A
-          </text>
-        </svg>
-      </div>
-
+    <section id="about-section" style={{ backgroundColor: 'white' }} className="relative overflow-hidden py-24 text-neutral-900 border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Brand Story Column */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-gold font-sans">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient font-sans">
               The Keepers of Your Vows
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight text-neutral-900 leading-tight">
-              You Dreamed of This Day. Let’s Make It <span className="italic text-gold">Eternal</span>.
+              You Dreamed of This Day. Let’s Make It <span className="italic text-brand-gradient">Eternal</span>.
             </h2>
             <div className="space-y-4 font-sans text-neutral-600 text-sm leading-relaxed">
               <p>
@@ -119,7 +63,7 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="p-3 bg-gold/10 text-gold rounded-sm inline-block mb-4 group-hover:bg-gold group-hover:text-white transition-all">
+                    <div className="p-3 bg-gold/10 text-gold rounded-sm inline-block mb-4 group-hover:bg-[linear-gradient(90deg,#D4AF37,#F8E7A1)] group-hover:text-white transition-all">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <h3 className="font-serif text-lg font-medium text-neutral-900 mb-2">

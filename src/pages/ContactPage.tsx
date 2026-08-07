@@ -1,6 +1,5 @@
 import ContactSection from '../components/ContactSection';
 import SEOHelper from '../components/SEOHelper';
-import { Mail, Calendar, Phone, Sparkles } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -21,10 +20,7 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
-          <span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-widest text-gold">
-            <Mail className="w-4.5 h-4.5 text-gold" /> Let’s Lock Down Your Date
-          </span>
-          <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight">
+          <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-brand-gradient">
             Book Your Wedding Photographer
           </h1>
           <p className="font-sans text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
