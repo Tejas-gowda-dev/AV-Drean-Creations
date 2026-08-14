@@ -210,7 +210,7 @@ export default function Services() {
               <a
                 id={`service-card-${srv.id}`}
                 href={srv.link}
-                className="group relative flex flex-col items-center justify-center p-8 bg-neutral-50/50 border border-neutral-200/60 hover:border-brand-purple/40 rounded-sm text-center h-[280px] overflow-hidden transition-all duration-500 cursor-pointer hover:bg-white shadow-sm hover:shadow-md"
+                className="group relative flex flex-col items-center justify-center p-8 bg-neutral-50/50 border border-neutral-200/60 hover:border-brand-purple/40 rounded-sm text-center h-[280px] overflow-hidden transition-all duration-500 cursor-pointer  shadow-sm hover:shadow-md"
               >
                 {/* Micro-reflective corner glow */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-neutral-200 rounded-tl-sm transition-all duration-500 group-hover:border-brand-purple/30"></div>

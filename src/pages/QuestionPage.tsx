@@ -1,10 +1,12 @@
 import Question from '../components/Question';
 import SEOHelper from '../components/SEOHelper';
 import { HelpCircle, Heart, Sparkles } from 'lucide-react';
+// @ts-ignore
+import main1 from "../assets/main1-image.webp";
 
 export default function QuestionPage() {
   return (
-    <div id="question-page-container" className="pt-24 bg-white text-neutral-900">
+    <div id="question-page-container" className=" bg-white text-neutral-900">
       <SEOHelper
         title="Frequently Asked Questions | AV Dream Creations Questions"
         description="Find answers to common questions about booking, album layouts, delivery timelines, candid shoot procedures, and travel policies for weddings across Bangalore and Karnataka."
@@ -14,7 +16,7 @@ export default function QuestionPage() {
       {/* Subpage Header Banner */}
       <div className="relative py-28 bg-neutral-950 text-white overflow-hidden text-center">
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop"
+          src={main1}
           alt="Frequently Asked Questions Background"
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover opacity-40 scale-105 transition-transform duration-700 hover:scale-100"

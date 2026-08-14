@@ -64,7 +64,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 };
 
   return (
-    <footer id="main-footer" style={{ backgroundColor: 'rgb(246, 246, 244)' }} className="text-neutral-600 pt-20 pb-6 border-t border-neutral-200 relative z-10">
+    <footer id="main-footer" style={{ backgroundColor: 'rgb(246, 246, 244)' }} className="text-neutral-600 pt-10 pb-6 border-t border-neutral-200 relative z-10">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 pb-4 border-b border-neutral-200">
           

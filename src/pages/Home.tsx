@@ -5,14 +5,14 @@ import CraftVsCommodity from '../components/CraftVsCommodity';
 import Services from '../components/Services';
 import PortfolioPreview from '../components/PortfolioPreview';
 import WeddingPhotographyPromo from '../components/WeddingPhotographyPromo';
-import Pricing from '../components/Pricing';
+// import Pricing from '../components/Pricing';
 import ConnectPortfolio from '../components/ConnectPortfolio';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
 import InstagramFeed from '../components/InstagramFeed';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import SEOHelper from '../components/SEOHelper';
-// @ts-ignore
-// import Logo from './Logo';
+import InstagramGallery from '../components/InstagramGallery';
+
 
 
 interface HomeProps {
@@ -50,45 +50,48 @@ export default function Home({ onNavigate }: HomeProps) {
     <div id="home-page-container">
       <SEOHelper
         title="AV Dream Creations..1 | Best Wedding Photographer & Films Bangalore"
-      description="AV Dream Creations offers premium wedding photography, high-end cinematic wedding films, pre-wedding shoots, engagement photography, and drone videography across Bangalore and Karnataka. Secure your timeless memories today."
-      keywords="best wedding photographer Bangalore, luxury wedding films Karnataka, professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Karnataka, pre-wedding shoot Bangalore, traditional wedding photography India, AV Dream Creations"
-      schema={homeSchema}
+        description="AV Dream Creations offers premium wedding photography, high-end cinematic wedding films, pre-wedding shoots, engagement photography, and drone videography across Bangalore and Karnataka. Secure your timeless memories today."
+        keywords="best wedding photographer Bangalore, luxury wedding films Karnataka, professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Karnataka, pre-wedding shoot Bangalore, traditional wedding photography India, AV Dream Creations"
+        schema={homeSchema}
       />
 
       {/* 1. Hero Section */}
       <Hero onNavigate={onNavigate} />
 
-      {/* 6. Portfolio / Gallery Preview */}
+      {/* 2. Instagram Gallery Section */}
+      <InstagramGallery />
+
+      {/* 3. Services Section */}
+      <Services />
+
+      {/* 4. Wedding Photography Promo section */}
+      <WeddingPhotographyPromo />
+
+      {/* 5. Featured Wedding Film */}
+      <FeaturedFilm />
+
+      {/* 6. Connect & Experience Section */}
+      <ConnectPortfolio />
+
+      {/* 7. Portfolio / Gallery Preview */}
       <PortfolioPreview />
 
-      {/* 2. Featured Wedding Film */}
-      <FeaturedFilm />
+      {/* 8. Wedding Packages / Pricing
+      <Pricing />
+      */}
+
+      {/* 9. Client Testimonials*/}
+      {/* <Testimonials /> */}
+      
+
+      {/* 10. Instagram Feed Section */}
+      <InstagramFeed />
 
       {/* 2.5. Craft Vs Commodity Philosophy Section */}
       <CraftVsCommodity />
 
       {/* 3. Trust Badges Bar */}
       <TrustBadges />
-
-      {/* 5. Services Section */}
-      <Services />
-
-      {/* 7. Wedding Photography Promo section */}
-      <WeddingPhotographyPromo />
-
-      {/* 7. Wedding Packages / Pricing
-      <Pricing />
-      */}
-
-      {/* 8. Connect & Experience Section */}
-      <ConnectPortfolio />
-
-      {/* 9. Client Testimonials
-      <Testimonials />
-      */}
-
-      {/* 10. Instagram Feed Section */}
-      <InstagramFeed />
 
       {/* 11. Before/After Slider */}
       <BeforeAfterSlider />

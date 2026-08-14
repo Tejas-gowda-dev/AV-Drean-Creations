@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
+// @ts-ignore
+import Main from "../assets/main-image.webp";
+
 import { Sparkles, ArrowRight, Heart } from 'lucide-react';
 
 export default function ConnectPortfolio() {
@@ -21,7 +24,7 @@ export default function ConnectPortfolio() {
             {/* Background Image Container */}
             <div className="absolute inset-0 z-0 overflow-hidden rounded-sm shadow-lg group">
               <img
-                src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1200&auto=format&fit=crop"
+                src={Main}
                 alt="Bespoke Cinematic Wedding Archway Portfolio"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
@@ -42,7 +45,7 @@ export default function ConnectPortfolio() {
                 </p>
                 <div className="pt-2">
                   <button
-                    onClick={() => handleNavClick('films')}
+                    onClick={() => handleNavClick('/films')}
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient hover:text-white transition-colors duration-300 group cursor-pointer"
                   >
                     <span>VIDEO GALLERY</span>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-// Use require for image to avoid missing .webp type declaration errors in TS
 // @ts-ignore
-import heroImage from '../assets/AvDreamCreation.webp';
+import Main from "../assets/main-image.webp";
+// @ts-ignore
+import main1 from "../assets/main1-image.webp";
 
 export default function WeddingPhotographyPromo() {
   const handleNavClick = (hash: string) => {
@@ -46,7 +47,7 @@ export default function WeddingPhotographyPromo() {
               className="absolute left-0 top-0 w-[72%] h-full z-0 overflow-hidden rounded-sm shadow-md"
             >
               <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000&auto=format&fit=crop"
+                src={main1}
                 alt="Intimate Wedding Couple Portraits"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -63,7 +64,7 @@ export default function WeddingPhotographyPromo() {
               className="absolute right-0 top-[10%] w-[48%] h-[80%] z-10 overflow-hidden rounded-sm shadow-xl border-[8px] sm:border-[12px] border-white"
             >
               <img
-                src={heroImage}
+                src={Main}
                 alt="Couple celebrating at scenic terrace"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -101,7 +102,7 @@ export default function WeddingPhotographyPromo() {
               className="lg:self-end pt-4"
             >
               <button
-                onClick={() => handleNavClick('#/gallery')}
+                onClick={() => handleNavClick('gallery')}
                 className="inline-flex items-center gap-2 group text-xs font-bold uppercase tracking-[0.2em] text-neutral-800 hover:text-brand-gradient transition-colors duration-300 cursor-pointer"
               >
                 <span>FIND OUT MORE</span>

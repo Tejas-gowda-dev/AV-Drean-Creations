@@ -53,3 +53,14 @@ export interface QuestionItem {
   question: string;
   answer: string;
 }
+
+export interface WeddingFilm {
+  id: string;
+  // title: string;
+  // subtitle: string;
+  // location: string;
+  duration: string;
+  thumbnailUrl: string;
+  youtubeId: string;
+  // tags: string[];
+}

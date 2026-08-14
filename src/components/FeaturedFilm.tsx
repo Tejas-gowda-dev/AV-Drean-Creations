@@ -2,14 +2,14 @@ import { Play, Sparkles, Film, Heart } from 'lucide-react';
 import { useState } from 'react';
 // Use require for image to avoid missing .webp type declaration errors in TS
 // @ts-ignore
-import heroImage from '../assets/AvDreamCreation.webp';
+import Main from "../assets/main-image.webp";
 
 
 export default function FeaturedFilm() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="featured-film-section" className="py-8 bg-white text-neutral-900 relative overflow-hidden border-b border-neutral-100">
+    <section id="featured-film-section" className="py-8 bg-white text-neutral-900 relative overflow-hidden border-b border-neutral-100 pb-14">
       <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -17,9 +17,9 @@ export default function FeaturedFilm() {
           <h2 className="font-serif text-2xl md:text-5xl font-light mb-4 leading-tight">
             Watch Our Latest <span className="italic text-brand-gradient">Wedding Film</span>
           </h2>
-          <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed ">
+          {/* <p className="font-sans text-italic text-sm md:text-base leading-relaxed ">
             We don’t just record footage; we compile premium cinematic symphonies. Press play and feel the raw, nervous heartbeat of an actual AV Dream Creations wedding.
-          </p>
+          </p> */}
         </div>
 
         {/* Video Player Container */}
@@ -28,7 +28,7 @@ export default function FeaturedFilm() {
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
               {/* Poster Image */}
               <img
-                src={heroImage}
+                src={Main}
                 alt="Latest Wedding Film Poster"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
@@ -38,7 +38,7 @@ export default function FeaturedFilm() {
               <button
                 id="play-film-btn"
                 onClick={() => setIsPlaying(true)}
-                className="relative z-20 h-20 w-20 bg-brand-gradient hover:bg-brand-gradient-hover text-white rounded-full flex items-center justify-center cursor-pointer shadow-2xl active:scale-95 hover:scale-105 transition-all duration-300"
+                className="relative z-20 h-20 w-20  text-white rounded-full flex items-center justify-center cursor-pointer shadow-2xl active:scale-95 hover:scale-105 transition-all duration-300"
                 aria-label="Play Wedding Film"
               >
                 <Play className="w-8 h-8 fill-white ml-1" />
@@ -46,11 +46,11 @@ export default function FeaturedFilm() {
 
               <div className="relative z-20 mt-6 text-center">
                 <p className="font-serif text-xl md:text-2xl font-medium text-white flex items-center gap-2 justify-center">
-                  Tejas & Divya <Heart className="w-4 h-4 text-gold fill-gold" />
+                  New & Divya <Heart className="w-4 h-4 text-white fill-white" />
                 </p>
-                <p className="font-mono text-xs text-neutral-400 tracking-widest uppercase mt-2">
+                {/* <p className="font-mono text-xs text-neutral-400 tracking-widest uppercase mt-2">
                   The Palace Grounds Cinema Show • 4K HDR Teaser
-                </p>
+                </p> */}
               </div>
 
               {/* Quality Badges */}
@@ -65,7 +65,7 @@ export default function FeaturedFilm() {
               id="youtube-film-iframe"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" // Standard fallback, can be easily replaced by user
+              src="https://youtu.be/JNKZN8uq1H8?si=q-LrJ5fYYsaiZeaO" // Standard fallback, can be easily replaced by user
               title="Latest Wedding Film By AV Dream Creations"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

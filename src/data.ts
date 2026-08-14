@@ -1,6 +1,4 @@
 import { Photo, Package, Service, TeamMember, Testimonial, QuestionItem } from './types';
-// @ts-ignore
-import babyshower from "../src/assets/baby-shawer.webp";
 export const SERVICES: Service[] = [
   {
     id: 'wedding-shoot',
@@ -410,6 +408,9 @@ export const Questions: QuestionItem[] = [
   }
 ];
 
+// @ts-ignore
+import babyshower from "../src/assets/baby-shawer.webp";
+
 export const INSTAGRAM_POSTS = [
   { id: 'ig1', url: babyshower, likes: '1.2k', comments: '45' },
   { id: 'ig2', url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400&auto=format&fit=crop', likes: '980', comments: '32' },
@@ -417,4 +418,42 @@ export const INSTAGRAM_POSTS = [
   { id: 'ig4', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400&auto=format&fit=crop', likes: '840', comments: '18' },
   { id: 'ig5', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop', likes: '1.1k', comments: '29' },
   { id: 'ig6', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=400&auto=format&fit=crop', likes: '1.3k', comments: '51' },
+];
+
+
+// Instagram Feed Photos
+// @ts-ignore
+import babyshower from "../src/assets/baby-shawer.webp";
+// @ts-ignore
+import Main from "../src/assets/main-image.webp";
+// @ts-ignore
+import main1 from "../src/assets/main1-image.webp";
+// @ts-ignore
+import baby1 from "../src/assets/baby-image1.webp";
+
+
+
+export const instagramPhotos = [
+  {
+    id: 1,
+    image: babyshower,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+    {
+    id: 1,
+    image: Main,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+  {
+    id: 1,
+    image: main1,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+  {
+    id: 1,
+    image: baby1,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+  
+  
 ];

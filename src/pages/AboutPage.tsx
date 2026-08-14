@@ -2,14 +2,13 @@ import MeetTheTeam from '../components/MeetTheTeam';
 import About from '../components/About';
 import SEOHelper from '../components/SEOHelper';
 import { Camera, Heart, HelpCircle, Sparkles } from 'lucide-react';
-// Use require for image to avoid missing .webp type declaration errors in TS
 // @ts-ignore
-import heroImage from '../assets/AvDreamCreation.webp';
+import Main from "../assets/main-image.webp";
 
 
 export default function AboutPage() {
   return (
-    <div id="about-page-container" className="pt-24 bg-white text-neutral-900">
+    <div id="about-page-container" className=" bg-white text-neutral-900">
       <SEOHelper
         title="About Us | AV Dream Creations - Professional Wedding Storytellers"
         description="Meet the visionaries behind AV Dream Creations. Learn about our candid wedding photographers, traditional ritual directors, and expert film editors serving Bangalore and Karnataka."
@@ -19,10 +18,10 @@ export default function AboutPage() {
       {/* Subpage Header Banner */}
       <div className="relative py-28 bg-neutral-950 text-white overflow-hidden text-center">
         <img
-          src={heroImage}
+          src={Main}
           alt="Meet the storytellers behind AV Dream Creations"
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 transition-transform duration-700 hover:scale-100"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 transition-transform duration-700 hover:scale-1000"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">

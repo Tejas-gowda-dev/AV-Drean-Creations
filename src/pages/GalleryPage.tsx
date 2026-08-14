@@ -73,7 +73,7 @@ export default function GalleryPage() {
   };
 
   return (
-    <div id="gallery-page-container" className="pt-24 bg-white text-neutral-900">
+    <div id="gallery-page-container" className="bg-white text-neutral-900">
       <SEOHelper
         title="Fine-Art Wedding Photography Gallery | AV Dream Creations"
         description="Browse our masterfully compiled, high-resolution photography collections. Discover beautiful candid portraits, pre-wedding couple shoots, traditional bridal albums, and festive event photos."

@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import { Play, X, Film, Heart, MapPin, Clock, Sparkles } from 'lucide-react';
 import SEOHelper from '../components/SEOHelper';
+import { WeddingFilm } from '../types';
+// @ts-ignore
+import Main from "../assets/main-image.webp";
 
-interface WeddingFilm {
-  id: string;
-  // title: string;
-  // subtitle: string;
-  // location: string;
-  duration: string;
-  thumbnailUrl: string;
-  youtubeId: string;
-  // tags: string[];
-}
 
 export default function FilmsPage() {
   const [activeFilm, setActiveFilm] = useState<WeddingFilm | null>(null);
@@ -23,7 +16,7 @@ export default function FilmsPage() {
       // subtitle: 'The Royal Heritage Sangeet & Wedding Trailer',
       // location: 'Udaipur Palace, Rajasthan',
       duration: '4:15 Mins',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000&auto=format&fit=crop',
+      thumbnailUrl: 'https://youtu.be/7pVpquui3Rc?si=L7zdjnehh_aUzPvC',
       youtubeId: 'W3M3fF67bW4', // Royal Indian Wedding Film
       // tags: ['Sangeet', 'Royal Wedding', 'Palace Shoot']
     },
@@ -43,7 +36,7 @@ export default function FilmsPage() {
       // subtitle: 'A Royal Mysore Raj Mahal Celebration',
       // location: 'Mysore Heritage Lawn, Karnataka',
       duration: '5:20 Mins',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop',
+      thumbnailUrl: 'https://images.unsplash.com/photo-15191497674-611481863552?q=80&w=1000&auto=format&fit=crop',
       youtubeId: 'yOorH5l6n-M', // Cinematic wedding
       // tags: ['Royal Wedding', 'Teaser', 'Tradition']
     },
@@ -92,7 +85,7 @@ export default function FilmsPage() {
   };
 
   return (
-    <div id="films-page-container" className="pt-24 min-h-screen bg-white text-neutral-900 ">
+    <div id="films-page-container" className="min-h-screen bg-white text-neutral-900 ">
       <SEOHelper
         title="Cinematic Wedding Films & Video Portfolio | AV Dream Creations"
         description="Experience luxury in motion. Watch real wedding highlights, high-resolution teaser clips, and epic candid love stories filmed by AV Dream Creations across Karnataka."
@@ -101,14 +94,14 @@ export default function FilmsPage() {
       />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[45vh] min-h-[320px] bg-neutral-950 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[45vh] min-h-[500px] bg-neutral-950 flex items-center justify-center overflow-hidden">
         {/* Ambient Blurred Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&ft=crop"
+            src={Main}
             alt="Cinematic Wedding Films Background"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover opacity-30 brightness-[0.4]"
+            className="w-full h-full object-cover opacity-30 brightness-[0.9]"
           />
         </div>
 
@@ -118,9 +111,9 @@ export default function FilmsPage() {
           <h1 className="font-serif text-4xl md:text-6xl font-light text-white mb-4 tracking-tight leading-none">
             Love in <span className="italic text-brand-gradient">Motion</span>
           </h1>
-          <p className="font-sans text-neutral-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+          {/* <p className="font-sans text-neutral-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
             We don’t just record events — we craft beautiful, cinematic films that make your heart race exactly the way it did on your wedding morning.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -133,7 +126,7 @@ export default function FilmsPage() {
           <h2 className="font-serif text-3xl md:text-4xl font-light  mb-4 tracking-tight">
             Cinematic Highlights & Wedding Films
           </h2>
-          <div className="w-12 h-0.5 bg-gold/50 mx-auto mt-4"></div>
+          {/* <div className="w-12 h-0.5 bg-gold/50 mx-auto mt-4"></div> */}
         </div>
 
         {/* Video Cards Grid */}
