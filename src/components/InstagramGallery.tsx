@@ -6,7 +6,7 @@ const InstagramGallery = () => {
       <div className="container mx-auto px-4">
     
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {instagramPhotos.map((photo) => (
             <a
               key={photo.id}

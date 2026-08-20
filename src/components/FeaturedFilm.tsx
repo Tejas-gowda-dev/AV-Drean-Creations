@@ -52,13 +52,6 @@ export default function FeaturedFilm() {
                   The Palace Grounds Cinema Show • 4K HDR Teaser
                 </p> */}
               </div>
-
-              {/* Quality Badges */}
-              {/* <div className="absolute bottom-6 left-6 z-20 flex gap-2 font-mono text-[10px] tracking-widest text-white/50">
-                <span className="border border-white/20 px-2 py-1 rounded-sm">ULTRA HD 4K</span>
-                <span className="border border-white/20 px-2 py-1 rounded-sm">60 FPS</span>
-                <span className="border border-white/20 px-2 py-1 rounded-sm">DOLBY AUDIO</span>
-              </div> */}
             </div>
           ) : (
             <iframe
@@ -76,20 +69,20 @@ export default function FeaturedFilm() {
         </div>
 
         {/* Cinematic Stats/Features Callout */}
-        {/* <div className="max-w-4xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center border-t border-neutral-100 pt-10">
+        <div className="max-w-4xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center border-t border-neutral-100 pt-10">
           <div className="space-y-1">
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-gold font-sans">Premium Same-Day Edits</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-brand-gradient font-sans">Premium Same-Day Edits</h4>
             <p className="text-xs text-neutral-600 leading-relaxed font-sans">We edit and showcase a 2-minute teaser of your morning rituals live during your evening reception.</p>
           </div>
           <div className="space-y-1">
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-gold font-sans">True 4K Cinematic Grade</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-brand-gradient font-sans">True 4K Cinematic Grade</h4>
             <p className="text-xs text-neutral-600 leading-relaxed font-sans">Filmed on advanced Netflix-approved full-frame cinema cameras and masterfully color-graded by experts.</p>
           </div>
           <div className="space-y-1">
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-gold font-sans">Custom Audio Symphonies</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-brand-gradient font-sans">Custom Audio Symphonies</h4>
             <p className="text-xs text-neutral-600 leading-relaxed font-sans">Every film features custom licensed sound tracks paired with the genuine, touching family vows and speeches.</p>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );

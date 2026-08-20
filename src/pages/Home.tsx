@@ -1,7 +1,5 @@
 import Hero from '../components/Hero';
-import TrustBadges from '../components/TrustBadges';
 import FeaturedFilm from '../components/FeaturedFilm';
-import CraftVsCommodity from '../components/CraftVsCommodity';
 import Services from '../components/Services';
 import PortfolioPreview from '../components/PortfolioPreview';
 import WeddingPhotographyPromo from '../components/WeddingPhotographyPromo';
@@ -88,10 +86,10 @@ export default function Home({ onNavigate }: HomeProps) {
       <InstagramFeed />
 
       {/* 2.5. Craft Vs Commodity Philosophy Section */}
-      <CraftVsCommodity />
+      {/* <CraftVsCommodity /> */}
 
       {/* 3. Trust Badges Bar */}
-      <TrustBadges />
+      {/* <TrustBadges /> */}
 
       {/* 11. Before/After Slider */}
       <BeforeAfterSlider />

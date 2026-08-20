@@ -1,4 +1,6 @@
 import { Photo, Package, Service, TeamMember, Testimonial, QuestionItem } from './types';
+
+// Main page our services data
 export const SERVICES: Service[] = [
   {
     id: 'wedding-shoot',
@@ -6,7 +8,7 @@ export const SERVICES: Service[] = [
     description: 'Breathtaking wedding coverage capturing the raw, sacred emotions of your sacred rituals and timeless vows.',
     image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop',
     iconName: 'Camera',
-    link: '#/gallery?category=wedding'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=wedding'
   },
   {
     id: 'pre-wedding-shoot',
@@ -14,7 +16,7 @@ export const SERVICES: Service[] = [
     description: 'Cinematic, storytelling couple portraits set against heritage palaces, lush greens, or dynamic urban backdrops.',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
     iconName: 'Heart',
-    link: 'gallery?category=pre-wedding'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=pre-wedding'
   },
   {
     id: 'bride-photography',
@@ -22,7 +24,7 @@ export const SERVICES: Service[] = [
     description: 'Intimate and striking bridal portraits detailing the fine elegance of bridal attire, jewelry, and contemplative moments.',
     image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop',
     iconName: 'Sparkles',
-    link: 'gallery?category=bride'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=bride'
   },
   {
     id: 'house-warming',
@@ -30,7 +32,7 @@ export const SERVICES: Service[] = [
     description: 'Warm and vivid documentation of your new beginnings, traditional Griha Pravesha pooja rituals, and family gatherings.',
     image: 'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=800&auto=format&fit=crop',
     iconName: 'Home',
-    link: 'gallery?category=house-warming'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=house-warming'
   },
   {
     id: 'baby-shower',
@@ -38,7 +40,7 @@ export const SERVICES: Service[] = [
     description: 'Soft, pastel-themed storytelling capturing the joy, tender maternal glow, and warm blessings of your pregnancy journey.',
     image: babyshower,
     iconName: 'Baby',
-    link: 'gallery?category=baby-shower'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=baby-shower'
   },
   {
     id: 'candid-videography',
@@ -46,7 +48,7 @@ export const SERVICES: Service[] = [
     description: 'Ultra-HD cinematic wedding films, emotional highlights, same-day edits, and professional drone coverage.',
     image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop',
     iconName: 'Video',
-    link: 'gallery?category=candid-videography'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=candid-videography'
   },
   {
     id: 'birthday-events',
@@ -54,7 +56,7 @@ export const SERVICES: Service[] = [
     description: 'High-energy candid frames, detailed theme décor shots, and laughter-filled moments of your milestone celebrations.',
     image: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=800&auto=format&fit=crop',
     iconName: 'Gift',
-    link: 'gallery?category=birthday'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=birthday'
   },
   {
     id: 'album-designing',
@@ -62,16 +64,50 @@ export const SERVICES: Service[] = [
     description: 'Artfully curated, premium hard-bound flush-mount coffee table albums designed to last for generations.',
     image: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=800&auto=format&fit=crop',
     iconName: 'BookOpen',
-    link: 'gallery?category=album-designing'
+    link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=album-designing'
   }
 ];
+
+
+
+// Gallery page portfolio data
 
 export const PORTFOLIO: Photo[] = [
   {
     id: 'w1',
-    url: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1000&auto=format&fit=crop',
+    url: Main,
     category: 'wedding',
-    title: 'Sacred Sindoor Ritual',
+    title: 'Sacred Sindoor Ritual..',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: main1,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: Main,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..1',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: Main,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..2',
     alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
     description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
     location: 'Palace Grounds, Bangalore',
@@ -79,7 +115,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'pw1',
-    url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop',
+    url: main1,
     category: 'pre-wedding',
     title: 'Sunset Whispers',
     alt: 'pre-wedding-couple-shoot-mysore-palace.jpg',
@@ -89,7 +125,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'b1',
-    url: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop',
+    url: babyshower,
     category: 'bride',
     title: 'The Regal Bride',
     alt: 'bridal-photography-traditional-red-lehenga-bangalore.jpg',
@@ -99,7 +135,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'e1',
-    url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop',
+    url: babyshower,
     category: 'candid-videography',
     title: 'Cinematic Promise Ring Exchange',
     alt: 'engagement-ring-exchange-ceremony-bangalore.jpg',
@@ -109,7 +145,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'r1',
-    url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000&auto=format&fit=crop',
+    url: main1,
     category: 'candid-videography',
     title: 'Cinematic Grand Reception Entrance',
     alt: 'wedding-reception-couple-entry-smoke-effect-bangalore.jpg',
@@ -119,7 +155,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'hw1',
-    url: 'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=1000&auto=format&fit=crop',
+    url: main1,
     category: 'house-warming',
     title: 'Traditional Griha Pravesha Pooja',
     alt: 'housewarming-ceremony-grihapravesha-ritual-bangalore.jpg',
@@ -139,7 +175,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'bt1',
-    url: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1000&auto=format&fit=crop',
+    url: babyshower,
     category: 'birthday',
     title: 'First Cake Smash',
     alt: 'first-birthday-celebration-candid-photography-bangalore.jpg',
@@ -149,7 +185,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'c1',
-    url: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1000&auto=format&fit=crop',
+    url: Main,
     category: 'album-designing',
     title: 'Custom Lay-flat Coffee Table Album',
     alt: 'corporate-events-candid-business-photography-bangalore.jpg',
@@ -159,7 +195,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'w2',
-    url: 'https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?q=80&w=1000&auto=format&fit=crop',
+    url: babyshower,
     category: 'wedding',
     title: 'Saptapadi Vows',
     alt: 'kannada-wedding-saptapadi-rituals-bangalore.jpg',
@@ -169,7 +205,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'pw2',
-    url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop',
+    url: Main,
     category: 'pre-wedding',
     title: 'Vintage Palace Romance',
     alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
@@ -179,7 +215,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'b2',
-    url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop',
+    url: Main,
     category: 'bride',
     title: 'A Golden Smile',
     alt: 'glowing-south-indian-bride-photography-bangalore.jpg',
@@ -413,11 +449,11 @@ import babyshower from "../src/assets/baby-shawer.webp";
 
 export const INSTAGRAM_POSTS = [
   { id: 'ig1', url: babyshower, likes: '1.2k', comments: '45' },
-  { id: 'ig2', url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400&auto=format&fit=crop', likes: '980', comments: '32' },
-  { id: 'ig3', url: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=400&auto=format&fit=crop', likes: '1.5k', comments: '64' },
-  { id: 'ig4', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400&auto=format&fit=crop', likes: '840', comments: '18' },
-  { id: 'ig5', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop', likes: '1.1k', comments: '29' },
-  { id: 'ig6', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=400&auto=format&fit=crop', likes: '1.3k', comments: '51' },
+  { id: 'ig2', url: Main, likes: '980', comments: '32' },
+  { id: 'ig3', url: main1, likes: '1.5k', comments: '64' },
+  { id: 'ig4', url: baby1, likes: '840', comments: '18' },
+  { id: 'ig5', url: babyshower, likes: '1.1k', comments: '29' },
+  { id: 'ig6', url: Main, likes: '1.3k', comments: '51' },
 ];
 
 
@@ -434,6 +470,26 @@ import baby1 from "../src/assets/baby-image1.webp";
 
 
 export const instagramPhotos = [
+  {
+    id: 1,
+    image: babyshower,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+    {
+    id: 1,
+    image: Main,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+  {
+    id: 1,
+    image: main1,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
+  {
+    id: 1,
+    image: baby1,
+    link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
+  },
   {
     id: 1,
     image: babyshower,

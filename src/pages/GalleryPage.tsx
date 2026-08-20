@@ -3,33 +3,104 @@ import { PORTFOLIO } from '../data';
 import { Photo } from '../types';
 import Lightbox from '../components/Lightbox';
 import SEOHelper from '../components/SEOHelper';
-import { Sparkles, LayoutGrid, Filter } from 'lucide-react';
+import { LayoutGrid, ArrowLeft, Images } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+// @ts-ignore
+import main1 from "../assets/main1-image.webp";
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [lightboxPhoto, setLightboxPhoto] = useState<Photo | null>(null);
 
+  /*
+   * CATEGORY LIST
+   *
+   * You can add/remove categories here.
+   * The photos themselves are controlled by PORTFOLIO.category.
+   */
   const categories = [
-    { label: 'All Work', id: 'all' },
-    { label: 'Weddings', id: 'wedding' },
-    { label: 'Pre-Weddings', id: 'pre-wedding' },
-    { label: 'Bride Photography', id: 'bride' },
-    { label: 'House Warming', id: 'house-warming' },
-    { label: 'Baby Shower', id: 'baby-shower' },
-    { label: 'Candid Videography', id: 'candid-videography' },
-    { label: 'Birthday Events', id: 'birthday' },
-    { label: 'Album Designing', id: 'album-designing' },
+    {
+      id: 'wedding',
+      label: 'Weddings',
+      description: 'Sacred moments, timeless emotions and beautiful wedding stories.',
+    },
+    {
+      id: 'pre-wedding',
+      label: 'Pre-Weddings',
+      description: 'Romantic couple portraits captured before the big day.',
+    },
+    {
+      id: 'bride',
+      label: 'Bride Photography',
+      description: 'Elegant bridal portraits, details and traditional moments.',
+    },
+    {
+      id: 'house-warming',
+      label: 'House Warming',
+      description: 'Beautiful memories from Griha Pravesha and family celebrations.',
+    },
+    {
+      id: 'baby-shower',
+      label: 'Baby Shower',
+      description: 'Joyful Seemantha, Valaikappu and maternity celebrations.',
+    },
+    {
+      id: 'candid-videography',
+      label: 'Candid Videography',
+      description: 'Natural emotions transformed into cinematic memories.',
+    },
+    {
+      id: 'birthday',
+      label: 'Birthday Events',
+      description: 'Fun, candid and memorable birthday celebrations.',
+    },
+    {
+      id: 'album-designing',
+      label: 'Album Designing',
+      description: 'Premium albums designed to preserve your memories.',
+    },
   ];
 
-  // Sync category state with URL hash query params (e.g., /gallery?category=wedding)
+  /*
+   * GET COVER IMAGE FOR EACH CATEGORY
+   *
+   * It automatically takes the first photo
+   * belonging to that category.
+   */
+  const getCategoryCover = (categoryId: string) => {
+    const photo = PORTFOLIO.find(
+      (photo) => photo.category === categoryId
+    );
+
+    return photo?.url || main1;
+  };
+
+  /*
+   * GET PHOTO COUNT FOR EACH CATEGORY
+   */
+  const getCategoryCount = (categoryId: string) => {
+    return PORTFOLIO.filter(
+      (photo) => photo.category === categoryId
+    ).length;
+  };
+
+  /*
+   * SYNC CATEGORY WITH URL HASH
+   *
+   * Example:
+   * #/gallery
+   * #/gallery?category=wedding
+   */
   useEffect(() => {
     const syncCategoryFromHash = () => {
       const hash = window.location.hash;
+
       if (hash.includes('?')) {
         const queryStr = hash.split('?')[1];
         const params = new URLSearchParams(queryStr);
         const cat = params.get('category');
+
         if (cat) {
           setSelectedCategory(cat);
         } else {
@@ -41,142 +112,414 @@ export default function GalleryPage() {
     };
 
     syncCategoryFromHash();
-    window.addEventListener('hashchange', syncCategoryFromHash);
-    return () => window.removeEventListener('hashchange', syncCategoryFromHash);
+
+    window.addEventListener(
+      'hashchange',
+      syncCategoryFromHash
+    );
+
+    return () => {
+      window.removeEventListener(
+        'hashchange',
+        syncCategoryFromHash
+      );
+    };
   }, []);
 
+  /*
+   * OPEN CATEGORY
+   */
   const handleCategoryChange = (id: string) => {
     setSelectedCategory(id);
+
     if (id === 'all') {
       window.location.hash = '/gallery';
     } else {
       window.location.hash = `/gallery?category=${id}`;
     }
+
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
-  const filteredPhotos = selectedCategory === 'all'
-    ? PORTFOLIO
-    : PORTFOLIO.filter(p => p.category === selectedCategory);
+  /*
+   * GO BACK TO ALL CATEGORIES
+   */
+  const handleBackToCategories = () => {
+    handleCategoryChange('all');
+  };
 
+  /*
+   * FILTER PHOTOS
+   *
+   * Only photos belonging to selected category
+   * will be displayed.
+   */
+  const filteredPhotos =
+    selectedCategory === 'all'
+      ? []
+      : PORTFOLIO.filter(
+          (photo) => photo.category === selectedCategory
+        );
+
+  /*
+   * CURRENT CATEGORY INFORMATION
+   */
+  const currentCategory = categories.find(
+    (category) => category.id === selectedCategory
+  );
+
+  /*
+   * LIGHTBOX NEXT
+   */
   const handleNext = () => {
-    if (!lightboxPhoto) return;
-    const idx = filteredPhotos.findIndex(p => p.id === lightboxPhoto.id);
-    const nextIdx = (idx + 1) % filteredPhotos.length;
+    if (!lightboxPhoto || filteredPhotos.length === 0) return;
+
+    const idx = filteredPhotos.findIndex(
+      (p) => p.id === lightboxPhoto.id
+    );
+
+    const nextIdx =
+      (idx + 1) % filteredPhotos.length;
+
     setLightboxPhoto(filteredPhotos[nextIdx]);
   };
 
+  /*
+   * LIGHTBOX PREVIOUS
+   */
   const handlePrev = () => {
-    if (!lightboxPhoto) return;
-    const idx = filteredPhotos.findIndex(p => p.id === lightboxPhoto.id);
-    const prevIdx = (idx - 1 + filteredPhotos.length) % filteredPhotos.length;
+    if (!lightboxPhoto || filteredPhotos.length === 0) return;
+
+    const idx = filteredPhotos.findIndex(
+      (p) => p.id === lightboxPhoto.id
+    );
+
+    const prevIdx =
+      (idx - 1 + filteredPhotos.length) %
+      filteredPhotos.length;
+
     setLightboxPhoto(filteredPhotos[prevIdx]);
   };
 
   return (
-    <div id="gallery-page-container" className="bg-white text-neutral-900">
+    <div
+      id="gallery-page-container"
+      className="bg-white text-neutral-900"
+    >
       <SEOHelper
         title="Fine-Art Wedding Photography Gallery | AV Dream Creations"
-        description="Browse our masterfully compiled, high-resolution photography collections. Discover beautiful candid portraits, pre-wedding couple shoots, traditional bridal albums, and festive event photos."
-        keywords="wedding photography gallery, candid portraits Bangalore, pre-wedding shoot pictures, bridal portrait photography, South Indian wedding photos, professional album design samples, family event photography Karnataka"
+        description="Browse our masterfully compiled photography collections including weddings, pre-weddings, bridal portraits, baby showers, birthdays and special events."
+        keywords="wedding photography gallery, candid portraits Bangalore, pre-wedding shoot pictures, bridal portrait photography, South Indian wedding photos, baby shower photography, birthday photography Bangalore"
       />
 
-      {/* Hero Banner */}
+      {/* =====================================================
+          HERO BANNER
+      ===================================================== */}
+
       <div className="relative py-28 bg-neutral-950 text-white overflow-hidden text-center">
+
         <img
-          src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1920&auto=format&fit=crop"
-          alt="Full photo portfolio catalog"
+          src={main1}
+          alt="Photography portfolio background"
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 transition-transform duration-700 hover:scale-100"
+          className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm scale-105"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
-          
+
           <h1 className="font-serif text-3xl md:text-5xl font-light tracking-tight">
-            The Complete Story <span className="italic text-brand-gradient">Portfolio</span>
+            The Complete Story{' '}
+            <span className="italic text-brand-gradient">
+              Portfolio
+            </span>
           </h1>
+
           <p className="font-sans text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
-            Delve into every single captured family vow, celebration, and intimate dynamic. Every photograph here is color graded, retouched, and processed under our elite signature guidelines.
+            Explore our photography collections and discover
+            beautifully captured moments from weddings,
+            celebrations and unforgettable occasions.
           </p>
+
         </div>
       </div>
 
-      {/* Main Grid & Filters */}
+      {/* =====================================================
+          CONTENT
+      ===================================================== */}
+
       <section className="py-20">
+
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          
-          {/* Filters List */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-14">
-            {categories.map((cat) => {
-              const isActive = selectedCategory === cat.id;
-              return (
+
+          {/* =================================================
+              CATEGORY VIEW
+          ================================================= */}
+
+          {selectedCategory === 'all' && (
+            <>
+              <div className="text-center mb-14">
+
+                <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold">
+                  Explore Our Work
+                </span>
+
+                <h2 className="font-serif text-3xl md:text-4xl mt-3">
+                  Photography{' '}
+                  <span className="italic text-brand-gradient">
+                    Collections
+                  </span>
+                </h2>
+
+                <p className="text-sm text-neutral-500 max-w-xl mx-auto mt-4">
+                  Choose a collection to explore the complete
+                  gallery from that category.
+                </p>
+
+              </div>
+
+              {/* CATEGORY CARDS */}
+
+              <motion.div
+                layout
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+              >
+
+                {categories.map((category) => {
+
+                  const coverImage =
+                    getCategoryCover(category.id);
+
+                  const photoCount =
+                    getCategoryCount(category.id);
+
+                  return (
+                    <motion.button
+                      key={category.id}
+                      layout
+                      initial={{
+                        opacity: 0,
+                        y: 20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition={{
+                        duration: 0.4,
+                      }}
+                      onClick={() =>
+                        handleCategoryChange(category.id)
+                      }
+                      className="group relative h-[420px] w-full overflow-hidden rounded-sm bg-neutral-900 text-left cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500"
+                    >
+
+                      {/* COVER IMAGE */}
+
+                      <img
+                        src={coverImage}
+                        alt={category.label}
+                        referrerPolicy="no-referrer"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      />
+
+                      {/* OVERLAY */}
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent"></div>
+
+                      {/* CONTENT */}
+
+                      <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+
+                        <div className="flex items-center gap-2 mb-3">
+
+                          <Images className="w-4 h-4 text-white/70" />
+
+                          <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/70">
+                            {photoCount}{' '}
+                            {photoCount === 1
+                              ? 'Photo'
+                              : 'Photos'}
+                          </span>
+
+                        </div>
+
+                        <h3 className="font-serif text-2xl font-medium">
+                          {category.label}
+                        </h3>
+
+                        <p className="text-xs text-neutral-300 mt-2 max-w-sm leading-relaxed">
+                          {category.description}
+                        </p>
+
+                        <div className="mt-5 text-[10px] uppercase tracking-[0.2em] font-bold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                          View Collection →
+                        </div>
+
+                      </div>
+
+                    </motion.button>
+                  );
+                })}
+
+              </motion.div>
+            </>
+          )}
+
+          {/* =================================================
+              PHOTO COLLECTION VIEW
+          ================================================= */}
+
+          {selectedCategory !== 'all' && (
+            <>
+
+              {/* BACK BUTTON */}
+
+              <div className="mb-10">
+
                 <button
-                  key={cat.id}
-                  onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-4.5 py-2.5 rounded-sm text-[10px] uppercase tracking-widest font-sans font-bold transition-all border cursor-pointer ${
-                    isActive
-                      ? 'bg-brand-gradient text-white border-transparent shadow-md font-bold'
-                      : 'bg-neutral-50 text-neutral-600 border-neutral-200 hover:bg-neutral-100 hover:border-neutral-300'
-                  }`}
+                  onClick={handleBackToCategories}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 border border-neutral-200 rounded-sm text-[10px] uppercase tracking-widest font-bold text-neutral-600 hover:bg-neutral-950 hover:text-white transition-all cursor-pointer"
                 >
-                  {cat.label}
+                  <ArrowLeft className="w-4 h-4" />
+                  All Collections
                 </button>
-              );
-            })}
-          </div>
 
-          {/* Album Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredPhotos.map((photo) => (
-                <motion.button
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                  key={photo.id}
-                  onClick={() => setLightboxPhoto(photo)}
-                  className="group relative h-96 w-full rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer border border-neutral-100 text-left"
-                >
-                  <img
-                    src={photo.url}
-                    alt={photo.alt}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <span className="text-[10px] uppercase tracking-widest font-sans text-gold font-bold block mb-1">{photo.category.replace('-', ' ')}</span>
-                    <h3 className="font-serif text-lg font-medium">{photo.title}</h3>
-                    <p className="text-xs text-neutral-300 font-mono mt-1 opacity-0 group-hover:opacity-100 transition-opacity">{photo.location}</p>
-                  </div>
-                </motion.button>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+              </div>
 
-          {/* Empty state handles */}
-          {filteredPhotos.length === 0 && (
-            <div className="text-center py-20 bg-neutral-50 rounded-sm border border-dashed border-neutral-200 max-w-xl mx-auto">
-              <LayoutGrid className="w-12 h-12 text-neutral-300 mx-auto mb-4" />
-              <p className="font-serif text-lg text-neutral-600">No photos available in this filter.</p>
-              <p className="font-sans text-xs text-neutral-400 mt-1">Please custom brief our designers to create one!</p>
-            </div>
+              {/* CATEGORY TITLE */}
+
+              <div className="text-center mb-14">
+
+                <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold">
+                  Photography Collection
+                </span>
+
+                <h2 className="font-serif text-3xl md:text-5xl mt-3">
+                  {currentCategory?.label}
+                </h2>
+
+                <p className="text-sm text-neutral-500 max-w-xl mx-auto mt-4">
+                  {currentCategory?.description}
+                </p>
+
+                <div className="mt-5 text-[10px] uppercase tracking-widest text-neutral-400">
+                  {filteredPhotos.length}{' '}
+                  {filteredPhotos.length === 1
+                    ? 'Photograph'
+                    : 'Photographs'}
+                </div>
+
+              </div>
+
+              {/* PHOTO GRID */}
+
+              <motion.div
+                layout
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+              >
+
+                <AnimatePresence mode="popLayout">
+
+                  {filteredPhotos.map((photo) => (
+
+                    <motion.button
+                      layout
+                      initial={{
+                        opacity: 0,
+                        scale: 0.95,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
+                      }}
+                      exit={{
+                        opacity: 0,
+                        scale: 0.95,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                      }}
+                      key={photo.id}
+                      onClick={() =>
+                        setLightboxPhoto(photo)
+                      }
+                      className="group relative h-96 w-full rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer border border-neutral-100 text-left"
+                    >
+
+                      <img
+                        src={photo.url}
+                        alt={photo.alt}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent"></div>
+
+                      <div className="absolute bottom-6 left-6 right-6 text-white">
+
+                        <span className="text-[10px] uppercase tracking-widest font-sans text-gold font-bold block mb-1">
+                          {photo.category.replace('-', ' ')}
+                        </span>
+
+                        <h3 className="font-serif text-lg font-medium">
+                          {photo.title}
+                        </h3>
+
+                        <p className="text-xs text-neutral-300 font-mono mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                          {photo.location}
+                        </p>
+
+                      </div>
+
+                    </motion.button>
+
+                  ))}
+
+                </AnimatePresence>
+
+              </motion.div>
+
+              {/* EMPTY STATE */}
+
+              {filteredPhotos.length === 0 && (
+                <div className="text-center py-20 bg-neutral-50 rounded-sm border border-dashed border-neutral-200 max-w-xl mx-auto">
+
+                  <LayoutGrid className="w-12 h-12 text-neutral-300 mx-auto mb-4" />
+
+                  <p className="font-serif text-lg text-neutral-600">
+                    No photos available in this collection.
+                  </p>
+
+                  <p className="font-sans text-xs text-neutral-400 mt-1">
+                    Photos will appear here once they are added.
+                  </p>
+
+                </div>
+              )}
+
+            </>
           )}
 
         </div>
       </section>
 
-      {/* Lightbox */}
+      {/* =====================================================
+          LIGHTBOX
+      ===================================================== */}
+
       <Lightbox
         photo={lightboxPhoto}
         onClose={() => setLightboxPhoto(null)}
         onNext={handleNext}
         onPrev={handlePrev}
       />
+
     </div>
   );
 }

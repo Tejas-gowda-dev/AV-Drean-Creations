@@ -102,8 +102,8 @@ export default function WeddingPhotographyPromo() {
               className="lg:self-end pt-4"
             >
               <button
-                onClick={() => handleNavClick('gallery')}
-                className="inline-flex items-center gap-2 group text-xs font-bold uppercase tracking-[0.2em] text-neutral-800 hover:text-brand-gradient transition-colors duration-300 cursor-pointer"
+                onClick={() => handleNavClick('/gallery')}
+                className="inline-flex items-center gap-2 group text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient hover:text-brand-gradient transition-colors duration-300 cursor-pointer"
               >
                 <span>FIND OUT MORE</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />

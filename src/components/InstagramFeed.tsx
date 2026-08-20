@@ -16,7 +16,7 @@ export default function InstagramFeed() {
           <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
             Follow Our Narrative On <span className="italic text-brand-gradient">Instagram</span>
           </h2>
-          <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed">
+          <p className="font-serif text-neutral-600 text-sm md:text-base leading-relaxed">
             We actively post real behind-the-scenes moments, daily wedding reels, previews of physical coffee table albums, and fine-art retouches on our social feeds.
           </p>
         </div>

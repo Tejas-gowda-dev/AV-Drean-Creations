@@ -45,7 +45,7 @@ export default function ConnectPortfolio() {
                 </p>
                 <div className="pt-2">
                   <button
-                    onClick={() => handleNavClick('/films')}
+                    onClick={() => handleNavClick('films')}
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient hover:text-white transition-colors duration-300 group cursor-pointer"
                   >
                     <span>VIDEO GALLERY</span>
@@ -77,7 +77,7 @@ export default function ConnectPortfolio() {
                   We strive for unforgettable experiences!
                 </p>
                 <button
-                  onClick={() => handleNavClick('/about')}
+                  onClick={() => handleNavClick('about')}
                   className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-brand-gradient hover:text-white transition-colors cursor-pointer"
                 >
                   <span>FIND OUT MORE</span>
@@ -114,7 +114,7 @@ export default function ConnectPortfolio() {
 
               <div className="pt-2">
                 <button
-                  onClick={() => handleNavClick('/contact')}
+                  onClick={() => handleNavClick('contact')}
                   className="w-full sm:w-auto h-14 px-10 rounded-sm bg-brand-gradient hover:bg-brand-gradient-hover text-white font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>CONTACT NOW</span>

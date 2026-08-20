@@ -142,7 +142,7 @@ export default function Services() {
   };
 
   // Card motion variants - sliding in beautifully from right to left
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: {
       opacity: 0,
       x: 60, // shifted to the right initially

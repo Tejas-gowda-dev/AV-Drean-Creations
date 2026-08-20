@@ -89,7 +89,7 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
                 key={item.route}
                 id={`nav-item-${item.route}`}
                 onClick={() => handleNavClick(item.route)}
-                className={`relative uppercase tracking-[4px] text-[11px] font-medium transition duration-300 hover:text-gold ${
+                className={`relative uppercase tracking-[4px] text-[11px] font-serif transition duration-300 hover:text-gold ${
                   isActive ? 'text-gold' : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -107,7 +107,7 @@ export default function Navbar({ currentRoute, onChangeRoute }: NavbarProps) {
           <button
             id="nav-cta-btn"
             onClick={() => handleNavClick('contact')}
-            className="hidden sm:flex items-center gap-1Av Dream Creations specializs h-11 px-5 text-[11px] font-mono uppercase tracking-widest transition-all cursor-pointer font-semibold  text-white rounded-sm"
+            className="hidden sm:flex items-center gap-1Av Dream Creations specializs h-11 px-5 text-[11px] font-serif uppercase tracking-widest transition-all cursor-pointer font-semibold  text-white rounded-sm"
           >
             Contact
             <ArrowRight className="w-3.5 h-3.5" />
