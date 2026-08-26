@@ -1,7 +1,6 @@
 import { SERVICES } from '../data';
 import { CalendarCheck, Heart } from 'lucide-react';
 import { motion, type Variants } from 'motion/react';
-// Use require for image to avoid missing .webp type declaration errors in TS
 // @ts-ignore
 import NewONe from "../assets/8775889-uhd_3840_2160_25fps.mp4";
 
@@ -201,7 +200,7 @@ export default function Services() {
           viewport={{ once: true, amount: 0.05 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl"
         >
-          {SERVICES.map((srv) => (
+          {SERVICES.map((srv: typeof SERVICES[number]) => (
             <motion.div 
               key={srv.id} 
               variants={cardVariants}

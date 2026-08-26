@@ -5,10 +5,18 @@ import { ArrowRight } from 'lucide-react';
 import Main from "../assets/main-image.webp";
 // @ts-ignore
 import main1 from "../assets/main1-image.webp";
+import { useNavigate } from 'react-router-dom';
 
 export default function WeddingPhotographyPromo() {
-  const handleNavClick = (hash: string) => {
-    window.location.hash = hash;
+  // const handleNavClick = (hash: string) => {
+  //   window.location.hash = hash;
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
+
+   const navigate = useNavigate();
+
+  const handleNavClick = (page: string) => {
+    navigate(`/${page}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

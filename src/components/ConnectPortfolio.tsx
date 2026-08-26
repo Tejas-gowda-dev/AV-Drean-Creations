@@ -1,13 +1,15 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { useNavigate } from "react-router-dom";
 // @ts-ignore
 import Main from "../assets/main-image.webp";
 
 import { Sparkles, ArrowRight, Heart } from 'lucide-react';
 
 export default function ConnectPortfolio() {
-  const handleNavClick = (hash: string) => {
-    window.location.hash = hash;
+    const navigate = useNavigate();
+
+  const handleNavClick = (page: string) => {
+    navigate(`/${page}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

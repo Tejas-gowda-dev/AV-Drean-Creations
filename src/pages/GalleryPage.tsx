@@ -162,8 +162,8 @@ export default function GalleryPage() {
     selectedCategory === 'all'
       ? []
       : PORTFOLIO.filter(
-          (photo) => photo.category === selectedCategory
-        );
+        (photo) => photo.category === selectedCategory
+      );
 
   /*
    * CURRENT CATEGORY INFORMATION

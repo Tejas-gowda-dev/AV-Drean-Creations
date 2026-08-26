@@ -22,7 +22,8 @@ export default function CraftVsCommodity() {
           </h2>
 
           {/* Main philosophy text */}
-          <p className="font-['Inter'] text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed max-w-5xl mx-auto font-light tracking-wide text-justify sm:text-center">            We don't sell videos, we craft films. Amid all the beauty, the laughter, the love and tears of any wedding day, we create a celebration of you in a beautiful film crafted in our unique style. Our films tell the story of your love and express who you are. We strive to capture those special moments as they happen. It means being alive to the present, honouring the past, creating real treasures for the future. It is about transforming the events of your wedding into a living, lasting memory.
+          <p className="font-['Inter'] text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed max-w-5xl mx-auto font-light tracking-wide text-justify sm:text-center">    
+           We don't sell videos, we craft films. Amid all the beauty, the laughter, the love and tears of any wedding day, we create a celebration of you in a beautiful film crafted in our unique style. Our films tell the story of your love and express who you are. We strive to capture those special moments as they happen. It means being alive to the present, honouring the past, creating real treasures for the future. It is about transforming the events of your wedding into a living, lasting memory.
           </p>
         </motion.div>
       </div>

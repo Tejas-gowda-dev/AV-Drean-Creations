@@ -4,8 +4,10 @@ import { Sparkles, Images } from 'lucide-react';
 
 // @ts-ignore
 import main1 from "../assets/main1-image.webp";
+import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioPreview() {
+  const navigate = useNavigate();
 
   /*
    * CATEGORY LIST
@@ -18,6 +20,8 @@ export default function PortfolioPreview() {
       label: 'Weddings',
       description:
         'Sacred moments, timeless emotions and beautiful wedding stories.',
+      // link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=wedding'
+
     },
     {
       id: 'pre-wedding',
@@ -89,13 +93,19 @@ export default function PortfolioPreview() {
    * CATEGORY CLICK
    */
   const handleCategoryClick = (category: string) => {
-    window.location.hash = `/gallery?category=${category}`;
+    navigate(`gallery?category=album-designing/gallery?category=birthday#/gallery?category=${category}`);
 
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   };
+
+
+  // const handleNavClick = (page: string) => {
+  //   navigate(`/${page}`);
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
 
   return (
     <section
@@ -112,7 +122,7 @@ export default function PortfolioPreview() {
         <div className="text-center max-w-2xl mx-auto mb-16">
 
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient mb-2 font-sans">
-            Captured True Love Stories
+            Captured True Love Stories..
           </span>
 
           <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
@@ -201,7 +211,7 @@ export default function PortfolioPreview() {
 
                   {/* PHOTO COUNT */}
 
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-3 ">
 
                     <Images className="w-4 h-4 text-brand-gradient" />
 

@@ -214,6 +214,26 @@ export const PORTFOLIO: Photo[] = [
     date: 'March 2026'
   },
   {
+    id: 'pw2',
+    url: baby1,
+    category: 'pre-wedding',
+    title: 'Vintage Palace Romance',
+    alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
+    description: 'An elegant composition utilizing neoclassical arches and columns of a heritage palace.',
+    location: 'Lalitha Mahal, Mysore',
+    date: 'March 2026'
+  },
+  {
+    id: 'pw2',
+    url: babyshower,
+    category: 'pre-wedding',
+    title: 'Vintage Palace Romance',
+    alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
+    description: 'An elegant composition utilizing neoclassical arches and columns of a heritage palace.',
+    location: 'Lalitha Mahal, Mysore',
+    date: 'March 2026'
+  },
+  {
     id: 'b2',
     url: Main,
     category: 'bride',
@@ -443,6 +463,8 @@ export const Questions: QuestionItem[] = [
     answer: 'Premium wedding photography in Bangalore starts from ₹25,000 for single-day coverage (Silver) and goes up to ₹75,000+ for elite multi-day multi-camera productions (Platinum). Our most popular Gold package is priced at ₹45,000 and offers exceptional comprehensive value.'
   }
 ];
+
+//Instagram Feed Photos of Main page data
 
 // @ts-ignore
 import babyshower from "../src/assets/baby-shawer.webp";
