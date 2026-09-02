@@ -82,7 +82,7 @@ export default function About() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-900 leading-[1.15]">
+              <h2 className="font-serif text-3xl sm:text-3xl lg:text-5xl font-light text-neutral-900 leading-[1.15]">
                 Timeless Romance, Told with <span className="italic font-normal text-brand-gradient">Cinematic Grace</span>.
               </h2>
 

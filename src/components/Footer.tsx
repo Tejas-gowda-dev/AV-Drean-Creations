@@ -77,7 +77,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <Logo showTagline={true} isScrolled={true} />
             </button>
 
-            <p className="font-sans text-xs md:text-sm text-neutral-600 leading-relaxed">
+            <p className="font-serif italic text-xs md:text-sm text-neutral-600 leading-relaxed">
               We capture the raw, sacred emotions of weddings and compile premium visual masterpieces. Based in Bangalore, serving Mysore, Mandya, Tumkur, and all of Karnataka.
             </p>
 

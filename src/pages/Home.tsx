@@ -23,8 +23,7 @@ export default function Home({ onNavigate }: HomeProps) {
     '@type': 'PhotographyBusiness',
     'name': 'AV Dream Creations',
     'url': 'https://avdreamcreation.com',
-    // 'logo': Logo,
-    'description': 'Professional maternity, newborn, baby shower and family photography in Bengaluru.',
+    'description': 'Professional maternity, newborn, baby shower and family photography in Bengaluru, Professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Bangalore, pre-wedding shoot Bangalore, traditional wedding photography Bangalore.',
     'telephone': '+91-9743644065',
     'email': 'avdream518@gmail.com',
     'address': {
@@ -47,9 +46,9 @@ export default function Home({ onNavigate }: HomeProps) {
   return (
     <div id="home-page-container">
       <SEOHelper
-        title="AV Dream Creations..1 | Best Wedding Photographer & Films Bangalore"
+        title="AV Dream Creations | Best Wedding Photographer & Films Bangalore"
         description="AV Dream Creations offers premium wedding photography, high-end cinematic wedding films, pre-wedding shoots, engagement photography, and drone videography across Bangalore and Karnataka. Secure your timeless memories today."
-        keywords="best wedding photographer Bangalore, luxury wedding films Karnataka, professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Karnataka, pre-wedding shoot Bangalore, traditional wedding photography India, AV Dream Creations"
+        keywords="best wedding photographer Bangalore, luxury wedding films Karnataka, professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Bangalore, pre-wedding shoot Bangalore, traditional wedding photography Bangalore, AV Dream Creations"
         schema={homeSchema}
       />
 

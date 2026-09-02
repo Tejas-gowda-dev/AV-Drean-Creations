@@ -240,7 +240,7 @@ export default function GalleryPage() {
             </span>
           </h1>
 
-          <p className="font-sans text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+          <p className="font-serif italic text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
             Explore our photography collections and discover
             beautifully captured moments from weddings,
             celebrations and unforgettable occasions.

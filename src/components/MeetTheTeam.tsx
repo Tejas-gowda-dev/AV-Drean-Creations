@@ -3,7 +3,7 @@ import { Instagram, Camera, Sparkles } from 'lucide-react';
 
 export default function MeetTheTeam() {
   return (
-    <section id="team-section" className=" bg-white text-neutral-900 border-b border-neutral-100">
+    <section id="team-section" className="py-6 bg-white text-neutral-900 border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
         {/* Header */}

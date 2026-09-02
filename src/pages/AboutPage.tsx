@@ -46,7 +46,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-2xl md:text-3xl font-light text-white flex items-center gap-2 justify-center">
             Want to Collaborate on Your <span className="italic text-brand-gradient">Timeline</span>?
           </h2>
-          <p className="font-sans text-neutral-400 text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
+          <p className="font-serif italic text-neutral-400 text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
             Let’s craft a bespoke, warm visual storyboard that perfectly aligns with your traditional family values and auspicious dates. Expect custom quotes in 30 minutes.
           </p>
           <a

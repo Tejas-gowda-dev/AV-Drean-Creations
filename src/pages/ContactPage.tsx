@@ -25,7 +25,7 @@ export default function ContactPage() {
           <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-brand-gradient">
             Book Your Wedding Photographer
           </h1>
-          <p className="font-serif text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+          <p className="font-serif italic text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
             Ready to secure your date? Fill out our 30-minute booking form below. Our experience director will call you back immediately to consult on your dream timeline.
           </p>
         </div>

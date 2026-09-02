@@ -14,7 +14,7 @@ export default function QuestionPage() {
       />
 
       {/* Subpage Header Banner */}
-      <div className="relative py-28 bg-neutral-950 text-white overflow-hidden text-center">
+      <div className="relative py-16 bg-neutral-950 text-white overflow-hidden text-center">
         <img
           src={main1}
           alt="Frequently Asked Questions Background"
@@ -36,7 +36,7 @@ export default function QuestionPage() {
       <Question />
 
       {/* Bottom Callout */}
-      <section className="py-16 bg-neutral-950 text-white text-center">
+      <section className="py-14 bg-neutral-950 text-white text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="font-serif text-2xl md:text-3xl font-light text-white flex items-center gap-2 justify-center">
             Have a Specific <span className="italic text-brand-gradient">Question</span>?

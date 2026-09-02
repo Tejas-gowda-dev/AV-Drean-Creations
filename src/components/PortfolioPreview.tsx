@@ -122,17 +122,17 @@ export default function PortfolioPreview() {
         <div className="text-center max-w-2xl mx-auto mb-16">
 
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient mb-2 font-sans">
-            Captured True Love Stories..
+            Captured True Love Stories
           </span>
 
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
+          <h2 className="font-serif  text-3xl md:text-4xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
             Our Fine-Art Masterpiece{' '}
             <span className="italic text-brand-gradient">
               Gallery
             </span>
           </h2>
 
-          <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed">
+          <p className="font-serif italic text-neutral-600 text-sm md:text-base leading-relaxed">
             Every single image represents a genuine family, a real traditional ritual, and a customized color-graded masterpiece. Click any story to explore our complete gallery.
           </p>
 
