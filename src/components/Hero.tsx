@@ -63,7 +63,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             Deserves <span className="font-normal italic text-brand-gradient ">Timeless Memories</span>
           </h1>
 
-          <p className="font-serif text-neutral-200 max-w-3xl mx-auto text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] leading-relaxed uppercase">
+          <p className="font-serif italic text-neutral-200 max-w-3xl mx-auto text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] leading-relaxed uppercase">
             CAPTURING THE SOUL OF YOUR CELEBRATION WITH AN EMOTIONAL LENS.
           </p>
         </motion.div>

@@ -1,81 +1,134 @@
-import { Camera, Eye, Zap, Flame, Calendar, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Camera, Film, Sparkles, Clock, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
+// @ts-ignore
+import Main from "../assets/main-image.webp";
+
+const differentiators = [
+  {
+    icon: Camera,
+    title: 'Unobtrusive Candid Art',
+    description: 'We blend into the background to preserve authentic emotions, private glances, and raw joy without forced posing.'
+  },
+  {
+    icon: Film,
+    title: 'Cinematic Visual Tone',
+    description: 'Bespoke, warm color grading tailored to your venue and palette, crafted to feel like heirloom cinema.'
+  },
+  {
+    icon: Sparkles,
+    title: 'Aerial Drone Cinema',
+    description: 'Sweeping 4K perspectives capturing your mandap, venue architecture, and grand guest entrances.'
+  },
+  {
+    icon: Clock,
+    title: 'Rapid Teaser Delivery',
+    description: 'Receive your signature editorial highlight reel within 72 hours for instant social sharing.'
+  }
+];
 
 export default function About() {
-  const differentiators = [
-    {
-      icon: Eye,
-      title: 'Invisible Candid Style',
-      description: 'We don’t force stiff, uncomfortable poses. We float silently through your crowd, capturing genuine family laughter, silent tears, and secret shared glances.'
-    },
-    {
-      icon: Flame,
-      title: 'Cinematic Drone Cover',
-      description: 'A grand perspective for a grand milestone. Our premium drone filmmakers map your complete outdoor rituals and magnificent venue designs from the heavens.'
-    },
-    {
-      icon: Camera,
-      title: 'Color Grading',
-      description: 'Your memories shouldn’t look washed out. We meticulously process every pixel, color-grading your wedding pictures into deep, warm, cinematic heirlooms.'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Delivery Promise',
-      description: 'No endless months of waiting. Your custom wedding teaser reel lands on your phone in 3-5 days, and your complete high-resolution collection is fully ready in 4-6 weeks.'
-    }
-  ];
-
   return (
-    <section id="about-section" style={{ backgroundColor: 'white' }} className="relative overflow-hidden py-24 text-neutral-900 border-b border-neutral-100">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Brand Story Column */}
-          <div className="lg:col-span-5 space-y-6">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient font-sans">
-              The Keepers of Your Vows
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight text-neutral-900 leading-tight">
-              You Dreamed of This Day. Let’s Make It <span className="italic text-brand-gradient">Eternal</span>.
-            </h2>
-            <div className="space-y-4 font-sans text-neutral-600 text-sm leading-relaxed">
-              <p>
-              At AV Dream Creations, we believe that a weddingphotography is more than a moment in time it’s a lasting memory that can be cherished for years to come. We specialize in capturing beautiful and creative moments, whether it’s a wedding, a family portrait, or a special event. Our team of professional photographers work with you to bring your vision to life. We use a variety of techniques and equipment to ensure you get the highest quality photos that you’ll be proud to look back on. Visit our website to learn more and book your session today!
-              </p>
-              
-              <p className="italic font-serif text-neutral-500 border-l-2 border-gold pl-4">
-                "Our mission is simple: to make sure that fifty years from today, you can look at your wedding album and feel your heart race exactly the same way it did on your wedding morning."
-              </p>
-            </div>
-          </div>
+    <section id="about-section" className="relative  py-20 lg:py-10  text-neutral-900 overflow-hidden">
+      {/* Subtle Background Accent */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
 
-          {/* Differentiators Grid Column */}
-          <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          {/* Left Column: Visual Storytelling Collage */}
+          <motion.div
+            aria-label="Wedding photography gallery showcase"
+            className="lg:col-span-6 relative"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              {/* Primary Image */}
+              <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl border-4 border-white aspect-[4/5] sm:w-4/5">
+                <img
+                  src={Main}
+                  alt="Bride and groom intimate portrait"
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+
+              {/* Offset Overlapping Image */}
+              <div className="hidden sm:block absolute -bottom-10 -right-4 z-20 w-3/5 aspect-[3/4] overflow-hidden rounded-xl shadow-2xl border-4 border-white">
+                <img
+                  src={Main}
+                  alt="Detailed shot of Indian wedding rituals"
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column: Editorial Copy & Differentiators */}
+          <div className="lg:col-span-6 space-y-8">
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1">
+                <Heart className="w-3.5 h-3.5 text-amber-700 fill-amber-700" />
+                <span className="text-xl font-serif italic ">
+                  AV Dream Creations
+                </span>
+              </div>
+
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-900 leading-[1.15]">
+                Timeless Romance, Told with <span className="italic font-normal text-brand-gradient">Cinematic Grace</span>.
+              </h2>
+
+              <p className="font-serif italic text-sm text-neutral-600">
+                At AV Dream Creations, we believe that a weddingphotography is more than a moment in time it’s a lasting memory that can be cherished for years to come. We specialize in capturing beautiful and creative moments, whether it’s a wedding, a family portrait, or a special event. Our team of professional photographers work with you to bring your vision to life. We use a variety of techniques and equipment to ensure you get the highest quality photos that you’ll be proud to look back on. Visit our website to learn more and book your session today!              </p>
+            </motion.div>
+
+            {/* Differentiator Feature Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-2">
               {differentiators.map((diff, index) => {
                 const IconComponent = diff.icon;
                 return (
                   <motion.div
-                    key={index}
-                    id={`diff-card-${index}`}
-                    className="p-6 rounded-sm bg-luxury-cream border border-gray-100 shadow-sm hover:shadow-md hover:border-gold/30 transition-all duration-300 group"
+                    key={diff.title}
+                    className="p-5 rounded-xl bg-white border border-neutral-100 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300"
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 * index, duration: 0.5 }}
                   >
-                    <div className="p-3 bg-gold/10 text-gold rounded-sm inline-block mb-4 group-hover:bg-[linear-gradient(90deg,#D4AF37,#F8E7A1)] group-hover:text-white transition-all">
-                      <IconComponent className="w-5 h-5" />
+                    <div className="w-9 h-9 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center mb-3">
+                      <IconComponent className="w-4 h-4" />
                     </div>
-                    <h3 className="font-serif text-lg font-medium text-neutral-900 mb-2">
+                    <h3 className="font-serif text-base font-medium text-neutral-900 mb-1">
                       {diff.title}
                     </h3>
-                    <p className="font-sans text-xs text-neutral-500 leading-relaxed">
+                    <p className="text-xs text-neutral-600 leading-relaxed">
                       {diff.description}
                     </p>
                   </motion.div>
                 );
               })}
             </div>
+
+            {/* Editorial Quote */}
+            <motion.div
+              className="border-l-2 border-amber-700/60 pl-4 py-1"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <p className="font-serif italic text-sm text-neutral-600">
+                "Our mission is simple: to make sure that fifty years from today, you can look at your wedding album and feel your heart race exactly the same way it did on your wedding morning."
+              </p>
+            </motion.div>
           </div>
 
         </div>

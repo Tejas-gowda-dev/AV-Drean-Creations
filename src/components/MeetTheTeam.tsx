@@ -3,18 +3,18 @@ import { Instagram, Camera, Sparkles } from 'lucide-react';
 
 export default function MeetTheTeam() {
   return (
-    <section id="team-section" className="py-24 bg-white text-neutral-900 border-b border-neutral-100">
+    <section id="team-section" className=" bg-white text-neutral-900 border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-gold mb-2 font-sans">
+          <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-gradient mb-2 font-sans">
             The Visionaries
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
+          <h2 className="font-serif text-xl md:text-4xl font-light text-neutral-900 mb-4 tracking-tight leading-tight">
             Meet the Team Behind <span className="italic text-brand-gradient">AV Dream Creations</span>
           </h2>
-          <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed">
+          <p className="font-serif italic text-neutral-600 text-sm md:text-base leading-relaxed">
             Our talented guild of master candid photographers, cinematic directors, and editors combine experience and technology to tell your emotional narrative.
           </p>
         </div>

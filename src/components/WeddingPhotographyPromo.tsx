@@ -8,10 +8,7 @@ import main1 from "../assets/main1-image.webp";
 import { useNavigate } from 'react-router-dom';
 
 export default function WeddingPhotographyPromo() {
-  // const handleNavClick = (hash: string) => {
-  //   window.location.hash = hash;
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // };
+  
 
    const navigate = useNavigate();
 

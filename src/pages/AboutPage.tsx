@@ -25,10 +25,10 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
-          <h1 className="font-serif text-3xl md:text-5xl font-light tracking-tight">
-            Meet the Team Behind <span className="italic text-brand-gradient">AV Dream Creations</span>
+          <h1 className="font-serif text-3xl md:text-4xl font-light tracking-tight">
+            Who Are We <span className="italic text-brand-gradient">AV Dream Creations</span>
           </h1>
-          <p className="font-sans text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+          <p className="font-serif italic text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
             Get to know our dedicated founders, candid directors, and cinematic layout artists. We combine classical training with state-of-the-art cinematic equipment to deliver cinematic timelines.
           </p>
         </div>

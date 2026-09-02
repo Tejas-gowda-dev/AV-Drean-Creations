@@ -180,14 +180,14 @@ export default function Services() {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="inline-block text-[15px] font-bold uppercase tracking-[0.3em] text-brand-gradient mb-3 font-mono">
+          <span className="inline-block text-[15px] font-serif italic uppercase tracking-[0.3em] text-brand-gradient mb-3 font-mono">
             OUR SERVICES
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-neutral-900 mb-5 tracking-tight leading-tight">
+          <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-5 tracking-tight leading-tight">
             Crafting Art Across Your <span className="italic text-brand-gradient">Milestones</span>
           </h2>
           {/* <div className="w-12 h-[1px] bg-brand-purple/30 mx-auto mb-5"></div> */}
-          <p className="font-sans text-neutral-500 text-xs md:text-sm tracking-wide leading-relaxed">
+          <p className="font-serif italic text-neutral-500 text-xs md:text-sm tracking-wide leading-relaxed">
             From the emotional vows of your Wedding Shoot to storytelling Pre-Weddings, Griha Pravesha, and festive baby showers. Click any service to book or inquire.
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function Services() {
             <a
               id="services-cta-consult"
               href="contact"
-              className="w-full md:w-auto text-center h-14 px-8 rounded-sm bg-brand-gradient hover:bg-brand-gradient-hover text-white font-bold font-mono text-xs uppercase tracking-widest flex items-center justify-center whitespace-nowrap transition-all duration-300 shadow-xl cursor-pointer"
+              className="w-full md:w-auto text-center h-14 px-8 rounded-sm bg-brand-gradient hover:bg-brand-gradient-hover text-white font-serif italic font-mono text-xs uppercase tracking-widest flex items-center justify-center whitespace-nowrap transition-all duration-300 shadow-xl cursor-pointer"
             >
               Get Free Consultation
             </a>
