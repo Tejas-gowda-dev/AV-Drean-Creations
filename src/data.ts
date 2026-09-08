@@ -1,5 +1,6 @@
 import { Photo, Package, Service, TeamMember, Testimonial, QuestionItem } from './types';
 
+
 // Main page our services data
 export const SERVICES: Service[] = [
   {
@@ -72,10 +73,13 @@ export const SERVICES: Service[] = [
 
 // Gallery page portfolio data
 
+// @ts-ignore
+import wedding1 from './assets/Weddings1.webp';
+
 export const PORTFOLIO: Photo[] = [
   {
     id: 'w1',
-    url: Main,
+    url: wedding1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
     alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
@@ -108,6 +112,46 @@ export const PORTFOLIO: Photo[] = [
     url: Main,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..2',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: wedding1,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: wedding1,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: wedding1,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..',
+    alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
+    description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
+    location: 'Palace Grounds, Bangalore',
+    date: 'December 2025'
+  },
+  {
+    id: 'w1',
+    url: wedding1,
+    category: 'wedding',
+    title: 'Sacred Sindoor Ritual..',
     alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
     description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
     location: 'Palace Grounds, Bangalore',
@@ -487,6 +531,8 @@ import Main from "../src/assets/main-image.webp";
 // @ts-ignore
 import main1 from "../src/assets/main1-image.webp";
 // @ts-ignore
+import main3 from "../src/assets/Main3.webp";
+// @ts-ignore
 import baby1 from "../src/assets/baby-image1.webp";
 
 
@@ -514,7 +560,7 @@ export const instagramPhotos = [
   },
   {
     id: 1,
-    image: babyshower,
+    image: main3,
     link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
   },
     {

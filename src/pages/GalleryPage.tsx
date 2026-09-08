@@ -226,10 +226,10 @@ export default function GalleryPage() {
           src={main1}
           alt="Photography portfolio background"
           referrerPolicy="no-referrer"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm scale-105"
+          className="absolute inset-0 w-full h-full object-cover opacity-70  scale-105" // opacity-70 scale-105 is image colore make chage here 
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div> */}
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
 
@@ -253,7 +253,7 @@ export default function GalleryPage() {
           CONTENT
       ===================================================== */}
 
-      <section className="py-20">
+      <section className="py-8">
 
         <div className="max-w-7xl mx-auto px-4 md:px-6">
 
@@ -265,7 +265,7 @@ export default function GalleryPage() {
             <>
               <div className="text-center mb-14">
 
-                <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-brand-gradient font-bold">
                   Explore Our Work
                 </span>
 
@@ -276,7 +276,7 @@ export default function GalleryPage() {
                   </span>
                 </h2>
 
-                <p className="text-sm text-neutral-500 max-w-xl mx-auto mt-4">
+                <p className="text-sm text-serif italic  max-w-xl mx-auto mt-4">
                   Choose a collection to explore the complete
                   gallery from that category.
                 </p>
@@ -380,7 +380,7 @@ export default function GalleryPage() {
 
               {/* BACK BUTTON */}
 
-              <div className="mb-10">
+              <div className="mb-8">
 
                 <button
                   onClick={handleBackToCategories}
@@ -394,21 +394,21 @@ export default function GalleryPage() {
 
               {/* CATEGORY TITLE */}
 
-              <div className="text-center mb-14">
+              <div className="text-center mb-8">
 
-                <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-brand-gradient font-bold">
                   Photography Collection
                 </span>
 
-                <h2 className="font-serif text-3xl md:text-5xl mt-3">
+                <h2 className="font-serif italic text-3xl md:text-5xl mt-3">
                   {currentCategory?.label}
                 </h2>
 
-                <p className="text-sm text-neutral-500 max-w-xl mx-auto mt-4">
+                <p className="text-sm text-serif italic max-w-xl mx-auto mt-4">
                   {currentCategory?.description}
                 </p>
 
-                <div className="mt-5 text-[10px] uppercase tracking-widest text-neutral-400">
+                <div className="mt-5 text-[10px] uppercase tracking-widest text-brand-gradient">
                   {filteredPhotos.length}{' '}
                   {filteredPhotos.length === 1
                     ? 'Photograph'
@@ -418,90 +418,46 @@ export default function GalleryPage() {
               </div>
 
               {/* PHOTO GRID */}
-
               <motion.div
                 layout
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[220px] gap-3"
               >
-
                 <AnimatePresence mode="popLayout">
+                  {filteredPhotos.map((photo, index) => {
+                    const layouts = [
+                      "lg:col-span-2 lg:row-span-2", // Large left image
+                      "lg:col-span-2 lg:row-span-1", // Top right
+                      "lg:col-span-1 lg:row-span-1", // Small
+                      "lg:col-span-1 lg:row-span-1", // Small
+                      "lg:col-span-4 lg:row-span-2", // Bottom full-width
+                    ];
 
-                  {filteredPhotos.map((photo) => (
+                    return (
+                      <motion.button
+                        key={photo.id}
+                        layout
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setLightboxPhoto(photo)}
+                        className={`group relative overflow-hidden rounded-sm cursor-pointer border border-neutral-100 shadow-sm hover:shadow-xl transition-all ${layouts[index % layouts.length]
+                          }`}
+                      >
+                        <img
+                          src={photo.url}
+                          alt={photo.alt}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
 
-                    <motion.button
-                      layout
-                      initial={{
-                        opacity: 0,
-                        scale: 0.95,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        scale: 1,
-                      }}
-                      exit={{
-                        opacity: 0,
-                        scale: 0.95,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                      }}
-                      key={photo.id}
-                      onClick={() =>
-                        setLightboxPhoto(photo)
-                      }
-                      className="group relative h-96 w-full rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer border border-neutral-100 text-left"
-                    >
-
-                      <img
-                        src={photo.url}
-                        alt={photo.alt}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      />
-
-                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent"></div>
-
-                      <div className="absolute bottom-6 left-6 right-6 text-white">
-
-                        <span className="text-[10px] uppercase tracking-widest font-sans text-gold font-bold block mb-1">
-                          {photo.category.replace('-', ' ')}
-                        </span>
-
-                        <h3 className="font-serif text-lg font-medium">
-                          {photo.title}
-                        </h3>
-
-                        <p className="text-xs text-neutral-300 font-mono mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                          {photo.location}
-                        </p>
-
-                      </div>
-
-                    </motion.button>
-
-                  ))}
-
+                      </motion.button>
+                    );
+                  })}
                 </AnimatePresence>
-
               </motion.div>
 
-              {/* EMPTY STATE */}
 
-              {filteredPhotos.length === 0 && (
-                <div className="text-center py-20 bg-neutral-50 rounded-sm border border-dashed border-neutral-200 max-w-xl mx-auto">
-
-                  <LayoutGrid className="w-12 h-12 text-neutral-300 mx-auto mb-4" />
-
-                  <p className="font-serif text-lg text-neutral-600">
-                    No photos available in this collection.
-                  </p>
-
-                  <p className="font-sans text-xs text-neutral-400 mt-1">
-                    Photos will appear here once they are added.
-                  </p>
-
-                </div>
-              )}
 
             </>
           )}

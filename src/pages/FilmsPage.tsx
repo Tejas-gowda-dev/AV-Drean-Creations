@@ -4,11 +4,22 @@ import SEOHelper from '../components/SEOHelper';
 import { WeddingFilm } from '../types';
 // @ts-ignore
 import Main from "../assets/main-image.webp";
+import { motion } from 'framer-motion';
+
+
 
 
 export default function FilmsPage() {
+
+
+
   const [activeFilm, setActiveFilm] = useState<WeddingFilm | null>(null);
 
+
+  const embedUrl = activeFilm
+    ? `https://www.youtube.com/embed/${activeFilm.youtubeId}?autoplay=1&rel=0`
+    : '';
+  
   const weddingFilms: WeddingFilm[] = [
     {
       id: 'kanak-vidhi',
@@ -86,7 +97,7 @@ export default function FilmsPage() {
             src={Main}
             alt="Cinematic Wedding Films Background"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover opacity-30 brightness-[0.9]"
+            className="w-full h-full object-cover opacity-30 "
           />
         </div>
 
@@ -169,7 +180,7 @@ export default function FilmsPage() {
 
             {/* Video Aspect Ratio Box */}
             <div className="relative aspect-video bg-black">
-              <iframe
+              {/* <iframe
                 id="modal-youtube-iframe"
                 width="0%"
                 height="0%"
@@ -179,7 +190,26 @@ export default function FilmsPage() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
-              ></iframe>
+              ></iframe> */}
+
+              <motion.div
+                key="player"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-full h-full"
+              >
+                <iframe
+                  id="youtube-film-iframe"
+                  width="100%"
+                  height="100%"
+                  src={embedUrl}
+                  title="Latest Wedding Film By AV Dream Creations"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </motion.div>
             </div>
 
             {/* Modal Info Footbar */}

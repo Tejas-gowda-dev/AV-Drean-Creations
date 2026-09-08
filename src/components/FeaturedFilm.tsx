@@ -1,14 +1,15 @@
-import { Play, Heart, Film, Sparkles, Volume2 } from 'lucide-react';
+import { Play, Heart,  Volume2 } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import WatchOurLatest from "../assets/WatchOurLatest.webp"; 
 
 export default function FeaturedFilm() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // YouTube embed URL with autoplay enabled upon click
-  const videoId = "JNKZN8uq1H8";
+  const videoId = "Xvi9_BPSSoU";
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
   return (
@@ -58,7 +59,7 @@ export default function FeaturedFilm() {
               >
                 {/* Poster Background */}
                 <img
-                  src={Main}
+                  src={WatchOurLatest}
                   alt="Wedding Film - New and Divya"
                   referrerPolicy="no-referrer"
                   className="absolute inset-0 w-full h-full object-cover brightness-[0.45] group-hover:scale-105 group-hover:brightness-[0.35] transition-all duration-700 ease-out"
@@ -98,7 +99,7 @@ export default function FeaturedFilm() {
 
                 {/* Bottom Sound Indication */}
                 <div className="absolute bottom-4 right-4 z-20 hidden sm:flex items-center gap-2 text-xs text-neutral-400 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/5">
-                  <Volume2 className="w-3.5 h-3.5 text-amber-400" />
+                  <Volume2 className="w-3.5 h-3.5 text-white" />
                   <span>Click to play with sound</span>
                 </div>
               </motion.div>

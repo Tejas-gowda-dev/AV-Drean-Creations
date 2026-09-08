@@ -4,13 +4,20 @@ import { motion, AnimatePresence } from 'motion/react';
 import Main from "../assets/main-image.webp";
 // @ts-ignore
 import main1 from "../assets/main1-image.webp";
+// @ts-ignore
+import main3 from "../assets/Main3.webp";
+// @ts-ignore
+import main4 from "../assets/main4.webp";
+
 interface HeroProps {
   onNavigate: (route: string) => void;
 }
 
 const BACKGROUND_IMAGES = [
+  main4,
   Main,
-  main1
+  main1,
+  main3
 ];
 
 export default function Hero({ onNavigate }: HeroProps) {
@@ -44,10 +51,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           />
         </AnimatePresence>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/60 z-10"></div>
-
-        {/* Fine-art geometric frame overlay */}
-        {/* <div className="absolute inset-8 pointer-events-none hidden md:block rounded-2xl z-5"></div> */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/40 via-black/20 to-black/10"></div>
       </div>
 
       {/* Content Container */}

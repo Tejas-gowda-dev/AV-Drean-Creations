@@ -20,7 +20,6 @@ export default function PortfolioPreview() {
       label: 'Weddings',
       description:
         'Sacred moments, timeless emotions and beautiful wedding stories.',
-      // link: '/gallery?category=album-designing/gallery?category=birthday#/gallery?category=wedding'
 
     },
     {
@@ -102,11 +101,6 @@ export default function PortfolioPreview() {
   };
 
 
-  // const handleNavClick = (page: string) => {
-  //   navigate(`/${page}`);
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // };
-
   return (
     <section
       id="portfolio-preview-section"
@@ -145,7 +139,7 @@ export default function PortfolioPreview() {
 
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
         >
 
           {categories.map((category) => {
@@ -233,14 +227,6 @@ export default function PortfolioPreview() {
                   <h3 className="font-serif text-xl font-medium">
                     {category.label}
                   </h3>
-
-
-                  {/* DESCRIPTION */}
-
-                  {/* <p className="text-xs text-neutral-300 mt-2 max-w-sm leading-relaxed">
-                    {category.description}
-                  </p> */}
-
 
                   {/* HOVER CTA */}
 
