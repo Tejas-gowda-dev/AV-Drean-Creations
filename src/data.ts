@@ -88,7 +88,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w2',
     url: main1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
@@ -98,7 +98,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w3',
     url: Main,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..1',
@@ -108,7 +108,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w4',
     url: Main,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..2',
@@ -118,7 +118,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w5',
     url: wedding1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
@@ -128,7 +128,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w6',
     url: wedding1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
@@ -138,7 +138,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w7',
     url: wedding1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
@@ -148,7 +148,7 @@ export const PORTFOLIO: Photo[] = [
     date: 'December 2025'
   },
   {
-    id: 'w1',
+    id: 'w8',
     url: wedding1,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
@@ -156,7 +156,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'An emotional moment capturing the groom applying sindoor to his bride, framed in golden lighting.',
     location: 'Palace Grounds, Bangalore',
     date: 'December 2025'
-  },
+  }, //wedding data end 
   {
     id: 'pw1',
     url: main1,
@@ -166,17 +166,8 @@ export const PORTFOLIO: Photo[] = [
     description: 'A romantic silhouette of a couple holding hands in front of a majestic sunset lake.',
     location: 'Karanji Lake, Mysore',
     date: 'November 2025'
-  },
-  {
-    id: 'b1',
-    url: babyshower,
-    category: 'bride',
-    title: 'The Regal Bride',
-    alt: 'bridal-photography-traditional-red-lehenga-bangalore.jpg',
-    description: 'Stunning close-up portrait highlighting the bride’s traditional heavy jewelry and serene gaze.',
-    location: 'JW Marriott, Bangalore',
-    date: 'October 2025'
-  },
+  }, // pre-wedding data end
+  
   {
     id: 'e1',
     url: babyshower,
@@ -196,7 +187,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'The newlyweds entering their reception stage amidst cold fire sparkles and cold fog.',
     location: 'White Petals, Bangalore',
     date: 'January 2026'
-  },
+  }, // candid-videography data end
   {
     id: 'hw1',
     url: main1,
@@ -206,7 +197,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'Capturing the traditional homa fire rituals during a warm family house warming.',
     location: 'Tumkur Road, Bangalore',
     date: 'March 2026'
-  },
+  }, // house-warming data end
   {
     id: 'bs1',
     url: babyshower,
@@ -216,7 +207,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'Capturing the beautiful ritual of sliding green glass bangles onto the expectant mother’s wrists.',
     location: 'Mysore Road, Mandya',
     date: 'April 2026'
-  },
+  }, // baby-shower data end
   {
     id: 'bt1',
     url: babyshower,
@@ -226,7 +217,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'Pure joy in its rawest form as a one-year-old explorer plunges hands-first into their pastel-colored cake.',
     location: 'HSR Layout, Bangalore',
     date: 'May 2026'
-  },
+  }, // birthday data end
   {
     id: 'c1',
     url: Main,
@@ -236,47 +227,11 @@ export const PORTFOLIO: Photo[] = [
     description: 'Artfully designed album layouts printing rich memories onto thick, non-tearable high-gloss sheets.',
     location: 'Studio Production, Bangalore',
     date: 'June 2026'
-  },
-  {
-    id: 'w2',
-    url: babyshower,
-    category: 'wedding',
-    title: 'Saptapadi Vows',
-    alt: 'kannada-wedding-saptapadi-rituals-bangalore.jpg',
-    description: 'Treading the seven sacred steps together, symbolizing a life of mutual love, trust, and companionship.',
-    location: 'The Golden Palms, Bangalore',
-    date: 'February 2026'
-  },
-  {
-    id: 'pw2',
-    url: Main,
-    category: 'pre-wedding',
-    title: 'Vintage Palace Romance',
-    alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
-    description: 'An elegant composition utilizing neoclassical arches and columns of a heritage palace.',
-    location: 'Lalitha Mahal, Mysore',
-    date: 'March 2026'
-  },
-  {
-    id: 'pw2',
-    url: baby1,
-    category: 'pre-wedding',
-    title: 'Vintage Palace Romance',
-    alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
-    description: 'An elegant composition utilizing neoclassical arches and columns of a heritage palace.',
-    location: 'Lalitha Mahal, Mysore',
-    date: 'March 2026'
-  },
-  {
-    id: 'pw2',
-    url: babyshower,
-    category: 'pre-wedding',
-    title: 'Vintage Palace Romance',
-    alt: 'pre-wedding-shoot-lallitha-mahal-mysore.jpg',
-    description: 'An elegant composition utilizing neoclassical arches and columns of a heritage palace.',
-    location: 'Lalitha Mahal, Mysore',
-    date: 'March 2026'
-  },
+  }, // album-designing data end
+  
+ 
+ 
+ 
   {
     id: 'b2',
     url: Main,
@@ -286,7 +241,7 @@ export const PORTFOLIO: Photo[] = [
     description: 'A genuine, unposed moment capturing the bride breaking into a joyous laugh during her haldi ceremony.',
     location: 'Tumkur Palace, Tumkur',
     date: 'April 2026'
-  }
+  } // bride data end
 ];
 
 export const PACKAGES: Package[] = [

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, Heart, Sparkles } from 'lucide-react';
 // @ts-ignore
-import main1 from "../assets/wedding.webp";
+import NewONe from "../assets/8775889-uhd_3840_2160_25fps.mp4";
+
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -80,7 +81,7 @@ Sent via AV Dream Creations Website`;
   return (
     <section id="contact-section" className="py-24  text-neutral-900 relative overflow-hidden border-t border-neutral-100">
       {/* Subtle Background Image watermark */}
-      <div className="absolute inset-0 z-0 opacity-[1] pointer-events-none">
+      {/* <div className="absolute inset-0 z-0 opacity-[1] pointer-events-none">
         <img
           src={main1}
           alt="Wedding photography background pattern"
@@ -88,7 +89,19 @@ Sent via AV Dream Creations Website`;
           // className="w-full h-full object-cover"
           className="w-full h-full object-cover  scale-105"
         />
-      </div>
+      </div> */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-[500] scale-100"
+              >
+                <source src={NewONe} type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-b from-neutral-50/90 via-neutral-50/50 to-neutral-50/95"></div>
+            </div>
 
       {/* Background overlay circles */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-brand-purple/5 rounded-full blur-3xl pointer-events-none"></div>

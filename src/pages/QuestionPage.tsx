@@ -21,12 +21,12 @@ export default function QuestionPage() {
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover opacity-40 scale-105 transition-transform duration-700 hover:scale-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div> */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
           <h1 className="font-serif text-3xl md:text-5xl font-light tracking-tight">
             Frequently Answered <span className="italic text-brand-gradient">Inquiries</span>
           </h1>
-          <p className="font-sans text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+          <p className="font-serif italic text-neutral-300 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
             Have questions about booking, payments, delivery times, or our creative process? Find detailed responses curated by our production directors.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function QuestionPage() {
           <h2 className="font-serif text-2xl md:text-3xl font-light text-white flex items-center gap-2 justify-center">
             Have a Specific <span className="italic text-brand-gradient">Question</span>?
           </h2>
-          <p className="font-sans text-neutral-400 text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
+          <p className="font-serif italic text-neutral-400 text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
             Our team is always happy to jump on a quick call or chat on WhatsApp to guide you through your planning and customized requirements.
           </p>
           <a

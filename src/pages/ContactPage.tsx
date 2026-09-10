@@ -20,7 +20,7 @@ export default function ContactPage() {
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover opacity-100 scale-105 transition-transform duration-100 hover:scale-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40"></div> */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-4">
           <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-brand-gradient">
             Book Your Wedding Photographer

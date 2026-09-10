@@ -176,6 +176,7 @@ export default function GalleryPage() {
    * LIGHTBOX NEXT
    */
   const handleNext = () => {
+     console.count("Next");
     if (!lightboxPhoto || filteredPhotos.length === 0) return;
 
     const idx = filteredPhotos.findIndex(
