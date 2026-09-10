@@ -108,7 +108,7 @@ export default function ConnectPortfolio() {
               transition={{ duration: 0.6 }}
               className="space-y-3 max-w-md"
             >
-              <h4 className="font-serif italic text-2xl md:text-3xl font-black uppercase tracking-widest text-brand-gradient">
+              <h4 className="font-serif  text-2xl md:text-3xl font-black uppercase tracking-widest text-brand-gradient">
                 LET'S CONNECT
               </h4>
               <p className="font-serif italic text-xs md:text-sm text-neutral-600 leading-relaxed">
@@ -125,7 +125,7 @@ export default function ConnectPortfolio() {
               className="space-y-6 max-w-md"
             >
               <div className="space-y-3">
-                <h4 className="font-serif italic text-2xl md:text-3xl font-black uppercase tracking-widest text-brand-gradient">
+                <h4 className="font-serif  text-2xl md:text-3xl font-black uppercase tracking-widest text-brand-gradient">
                   SEND US A MESSAGE
                 </h4>
                 <p className="font-serif italic text-xs md:text-sm text-neutral-600 leading-relaxed">

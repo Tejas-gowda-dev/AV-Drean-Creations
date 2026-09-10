@@ -52,7 +52,7 @@ export default function BeforeAfterSlider() {
         <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-4 tracking-tight">
           Visual Alchemy: Raw vs. <span className="italic text-brand-gradient">Masterpiece</span>
         </h2>
-        <p className="font-sans text-neutral-600 max-w-2xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+        <p className="font-serif italic  max-w-2xl mx-auto mb-6 text-sm md:text-base leading-relaxed">
           Observe how we carefully balance warm shadows, deep contrast, and natural Indian skin tones to transform a beautiful candid shot into an everlasting work of fine-art heirloom.
         </p>
 

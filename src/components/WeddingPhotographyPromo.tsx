@@ -90,10 +90,10 @@ export default function WeddingPhotographyPromo() {
               transition={{ duration: 0.8 }}
               className="space-y-4 pt-4"
             >
-              <p className="font-sans text-xs sm:text-sm text-neutral-600 leading-relaxed font-light">
+              <p className="font-serif italic text-xs sm:text-sm text-neutral-600 leading-relaxed font-light">
                 As well as offering cinematic wedding videography for Bangalore and beyond, our wedding photography is all about real and natural moments. Our aim is to capture the essence of your day in timeless images.
               </p>
-              <p className="font-sans text-xs sm:text-sm text-neutral-600 leading-relaxed font-light">
+              <p className="font-serif italic text-xs sm:text-sm text-neutral-600 leading-relaxed font-light">
                 Our photos are a combination of everything we are inspired by such as, documentary photography, street photography, portrait and fashion, nature, design, decor, music and food. If this resonates with you, make sure to check our photography page below.
               </p>
             </motion.div>
