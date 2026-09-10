@@ -7,7 +7,7 @@ import { LayoutGrid, ArrowLeft, Images } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // @ts-ignore
-import main1 from "../assets/main1-image.webp";
+import main1 from "../assets/Weddings1.webp";
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -176,7 +176,6 @@ export default function GalleryPage() {
    * LIGHTBOX NEXT
    */
   const handleNext = () => {
-     console.count("Next");
     if (!lightboxPhoto || filteredPhotos.length === 0) return;
 
     const idx = filteredPhotos.findIndex(

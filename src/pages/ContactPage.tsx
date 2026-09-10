@@ -1,7 +1,7 @@
 import ContactSection from '../components/ContactSection';
 import SEOHelper from '../components/SEOHelper';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import main4 from "../assets/main4.webp";
 
 export default function ContactPage() {
   return (
@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Subpage Header Banner */}
       <div className="relative py-28 bg-neutral-50/50 text-white overflow-hidden text-center">
         <img
-          src={Main}
+          src={main4}
           alt="Contact us booking wedding photographer bangalore"
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover opacity-100 scale-105 transition-transform duration-100 hover:scale-100"

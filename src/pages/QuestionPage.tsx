@@ -2,7 +2,7 @@ import Question from '../components/Question';
 import SEOHelper from '../components/SEOHelper';
 import { HelpCircle, Heart, Sparkles } from 'lucide-react';
 // @ts-ignore
-import main1 from "../assets/main1-image.webp";
+import main1 from "../assets/Weddings1.webp";
 
 export default function QuestionPage() {
   return (

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
-// @ts-ignore
-import main1 from "../assets/main1-image.webp";
+import Main from "../assets/wedding.webp";
+
 // @ts-ignore
 import main3 from "../assets/Main3.webp";
 // @ts-ignore
@@ -16,7 +15,6 @@ interface HeroProps {
 const BACKGROUND_IMAGES = [
   main4,
   Main,
-  main1,
   main3
 ];
 

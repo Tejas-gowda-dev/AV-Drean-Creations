@@ -3,7 +3,7 @@ import { Play, X,  Clock,  } from 'lucide-react';
 import SEOHelper from '../components/SEOHelper';
 import { WeddingFilm } from '../types';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import Main from "../assets/Weddings1.webp";
 import { motion } from 'framer-motion';
 
 

@@ -3,7 +3,7 @@ import { PORTFOLIO } from '../data';
 import { Sparkles, Images } from 'lucide-react';
 
 // @ts-ignore
-import main1 from "../assets/main1-image.webp";
+import main1 from "../assets/Weddings1.webp";
 import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioPreview() {

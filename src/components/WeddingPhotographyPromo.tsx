@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import Main from "../assets/Weddings1.webp";
 // @ts-ignore
-import main1 from "../assets/main1-image.webp";
+import main1 from "../assets/Weddings1.webp";
 import { useNavigate } from 'react-router-dom';
 
 export default function WeddingPhotographyPromo() {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Camera, Film, Sparkles, Clock, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import Main from "../assets/Weddings1.webp";
 
 const differentiators = [
   {

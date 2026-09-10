@@ -1,6 +1,18 @@
 import { Photo, Package, Service, TeamMember, Testimonial, QuestionItem } from './types';
 
 
+// @ts-ignore
+import wedding1 from './assets/Weddings1.webp';
+// @ts-ignore
+import babyshower from './assets/babyshower.webp';
+// @ts-ignore
+import Main from "../src/assets/wedding.webp";
+// @ts-ignore
+import main3 from "../src/assets/Main3.webp";
+// @ts-ignore
+import main4 from "../src/assets/Main4.webp";
+
+
 // Main page our services data
 export const SERVICES: Service[] = [
   {
@@ -73,8 +85,7 @@ export const SERVICES: Service[] = [
 
 // Gallery page portfolio data
 
-// @ts-ignore
-import wedding1 from './assets/Weddings1.webp';
+
 
 export const PORTFOLIO: Photo[] = [
   {
@@ -89,7 +100,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'w2',
-    url: main1,
+    url: main4,
     category: 'wedding',
     title: 'Sacred Sindoor Ritual..',
     alt: 'wedding-photography-bangalore-sindoor-ritual.jpg',
@@ -159,7 +170,7 @@ export const PORTFOLIO: Photo[] = [
   }, //wedding data end 
   {
     id: 'pw1',
-    url: main1,
+    url: main4,
     category: 'pre-wedding',
     title: 'Sunset Whispers',
     alt: 'pre-wedding-couple-shoot-mysore-palace.jpg',
@@ -180,7 +191,7 @@ export const PORTFOLIO: Photo[] = [
   },
   {
     id: 'r1',
-    url: main1,
+    url: main4,
     category: 'candid-videography',
     title: 'Cinematic Grand Reception Entrance',
     alt: 'wedding-reception-couple-entry-smoke-effect-bangalore.jpg',
@@ -190,7 +201,7 @@ export const PORTFOLIO: Photo[] = [
   }, // candid-videography data end
   {
     id: 'hw1',
-    url: main1,
+    url: main4,
     category: 'house-warming',
     title: 'Traditional Griha Pravesha Pooja',
     alt: 'housewarming-ceremony-grihapravesha-ritual-bangalore.jpg',
@@ -465,30 +476,22 @@ export const Questions: QuestionItem[] = [
 
 //Instagram Feed Photos of Main page data
 
-// @ts-ignore
-import babyshower from "../src/assets/baby-shawer.webp";
+
 
 export const INSTAGRAM_POSTS = [
-  { id: 'ig1', url: babyshower, likes: '1.2k', comments: '45' },
+  { id: 'ig1', url: main4, likes: '1.2k', comments: '45' },
   { id: 'ig2', url: Main, likes: '980', comments: '32' },
-  { id: 'ig3', url: main1, likes: '1.5k', comments: '64' },
-  { id: 'ig4', url: baby1, likes: '840', comments: '18' },
-  { id: 'ig5', url: babyshower, likes: '1.1k', comments: '29' },
+  { id: 'ig3', url: main4, likes: '1.5k', comments: '64' },
+  { id: 'ig4', url: main4, likes: '840', comments: '18' },
+  { id: 'ig5', url: main4, likes: '1.1k', comments: '29' },
   { id: 'ig6', url: Main, likes: '1.3k', comments: '51' },
 ];
 
 
 // Instagram Feed Photos
-// @ts-ignore
-import babyshower from "../src/assets/baby-shawer.webp";
-// @ts-ignore
-import Main from "../src/assets/main-image.webp";
-// @ts-ignore
-import main1 from "../src/assets/main1-image.webp";
-// @ts-ignore
-import main3 from "../src/assets/Main3.webp";
-// @ts-ignore
-import baby1 from "../src/assets/baby-image1.webp";
+
+
+
 
 
 
@@ -505,12 +508,12 @@ export const instagramPhotos = [
   },
   {
     id: 1,
-    image: main1,
+    image: main4,
     link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
   },
   {
     id: 1,
-    image: baby1,
+    image: main4,
     link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
   },
   {
@@ -525,12 +528,12 @@ export const instagramPhotos = [
   },
   {
     id: 1,
-    image: main1,
+    image: main4,
     link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
   },
   {
     id: 1,
-    image: baby1,
+    image: main4,
     link: "https://www.instagram.com/avdreamcreations?igsh=Zm9sMndiMHY3cHhu",
   },
   

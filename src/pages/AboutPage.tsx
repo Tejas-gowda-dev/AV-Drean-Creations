@@ -3,7 +3,7 @@ import About from '../components/About';
 import SEOHelper from '../components/SEOHelper';
 import { Camera, Heart, HelpCircle, Sparkles } from 'lucide-react';
 // @ts-ignore
-import Main from "../assets/main-image.webp";
+import Main from "../assets/Weddings1.webp";
 
 
 export default function AboutPage() {
