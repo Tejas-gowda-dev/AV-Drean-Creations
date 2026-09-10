@@ -324,6 +324,8 @@ export default function GalleryPage() {
                       <img
                         src={coverImage}
                         alt={category.label}
+                        loading="lazy"
+                        decoding="async"
                         referrerPolicy="no-referrer"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
@@ -434,7 +436,7 @@ export default function GalleryPage() {
 
                     return (
                       <motion.button
-                        key={photo.id}
+                        key={`${photo.id}-${index}`}
                         layout
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -447,6 +449,8 @@ export default function GalleryPage() {
                         <img
                           src={photo.url}
                           alt={photo.alt}
+                          loading="lazy"
+                          decoding="async"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />

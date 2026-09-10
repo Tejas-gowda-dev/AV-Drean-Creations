@@ -22,7 +22,7 @@ export default function Home({ onNavigate }: HomeProps) {
     '@context': 'https://schema.org',
     '@type': 'PhotographyBusiness',
     'name': 'AV Dream Creations',
-    'url': 'https://avdreamcreation.com',
+    'url': 'https://avdreamcreations.com',
     'description': 'Professional maternity, newborn, baby shower and family photography in Bengaluru, Professional wedding photography, candid photographer Bangalore, cinematic wedding videographer Bangalore, pre-wedding shoot Bangalore, traditional wedding photography Bangalore.',
     'telephone': '+91-9743644065',
     'email': 'avdream518@gmail.com',

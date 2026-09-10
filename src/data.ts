@@ -525,8 +525,6 @@ export const INSTAGRAM_POSTS = [
 
 // Instagram Feed Photos
 // @ts-ignore
-import babyshower from "../src/assets/baby-shawer.webp";
-// @ts-ignore
 import Main from "../src/assets/main-image.webp";
 // @ts-ignore
 import main1 from "../src/assets/main1-image.webp";
