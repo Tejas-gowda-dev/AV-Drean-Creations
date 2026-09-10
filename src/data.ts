@@ -10,7 +10,7 @@ import Main from "../src/assets/wedding.webp";
 // @ts-ignore
 import main3 from "../src/assets/Main3.webp";
 // @ts-ignore
-import main4 from "../src/assets/Main4.webp";
+import main4 from "../src/assets/main4.webp";
 
 
 // Main page our services data
@@ -255,56 +255,7 @@ export const PORTFOLIO: Photo[] = [
   } // bride data end
 ];
 
-export const PACKAGES: Package[] = [
-  {
-    name: 'Silver',
-    price: '₹25,000',
-    tagline: 'Perfect for intimate family rituals and elegant traditional gatherings.',
-    description: 'A focused, highly professional coverage detailing every crucial moment of your auspicious day.',
-    features: [
-      '1 Senior Candid & Traditional Photographer',
-      'Continuous 1-Day Event Coverage (up to 6 Hours)',
-      '200+ Masterfully Edited High-Res Digital Photos',
-      'Online Private Digital Gallery Access for 6 Months',
-      'All raw images delivered on high-speed drive',
-      'Travel included within Bangalore city limits'
-    ],
-    popular: false
-  },
-  {
-    name: 'Gold',
-    price: '₹45,000',
-    tagline: 'Our signature comprehensive package — capturing every dream from multiple angles.',
-    description: 'The perfect blend of cinematic visuals, candid portraits, and a premium print artifact.',
-    features: [
-      '2 Photographers (1 Dedicated Candid + 1 Traditional Specialist)',
-      '1 Cinematic Videographer (Full HD Highlight Video + Teaser)',
-      'Professional Drone Aerial Coverage (Subject to permissions)',
-      '400+ Exquisitely Edited Ultra-Res Digital Photos',
-      '1 Premium Hard-Bound 40-Page Flush-Mount Album (12x15 inches)',
-      'Stellar 3-Minute Cinematic Wedding Teaser / Instagram Reel',
-      'Full raw files delivery + Online Digital Gallery for 1 Year'
-    ],
-    popular: true
-  },
-  {
-    name: 'Platinum',
-    price: '₹75,000+',
-    tagline: 'The ultimate royal heirloom production. Uncompromised quality, cinematic precision.',
-    description: 'Unrestricted premium coverage designed for grand weddings desiring the finest visual storytelling.',
-    features: [
-      '3 Elite Creators (2 Candid Photographers + 1 Traditional Pro)',
-      '2 Cinematic Filmmakers (Full Ultra-HD Cinematic Wedding Movie)',
-      '4K Aerial Drone Cinematography & Same-Day Edit Reels',
-      '600+ Signature Fine-Art Edited Digital Photos',
-      '2 Deluxe 40-Page Flush-Mount Photo Albums (Leatherette box)',
-      'Same-Day Teaser Video Edited & Delivered before the reception ends',
-      '1 Pre-Wedding or Post-Wedding Shoot (Up to 4 hours in Bangalore)',
-      'Complimentary Custom Wedding Invitation Reel & Highlight Movie'
-    ],
-    popular: false
-  }
-];
+
 
 export const TEAM: TeamMember[] = [
   {
